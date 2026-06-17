@@ -5,7 +5,11 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   plugins: [
     vue(),
-    dts({ tsconfigPath: './tsconfig.json', cleanVueFileName: true }),
+    dts({
+      tsconfigPath: './tsconfig.json',
+      cleanVueFileName: true,
+      exclude: ['stories/**', '.storybook/**'],
+    }),
   ],
   build: {
     lib: {
@@ -19,6 +23,7 @@ export default defineConfig({
       output: {
         globals: { vue: 'Vue' },
         assetFileNames: 'rv-design.[ext]',
+        exports: 'named',
       },
     },
   },

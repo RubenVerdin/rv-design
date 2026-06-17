@@ -8,7 +8,7 @@ interface AccordionItem {
   title: string
   content: string
   extra?: string
-  
+  disabled?: boolean
 }
 
 type AccordionKey = string | number
