@@ -1,0 +1,142 @@
+{/* Introduction.mdx — RV Design landing page inside Storybook */}
+import { Meta } from '@storybook/blocks'
+import pkg from '../package.json'
+
+<Meta title="Introduction" />
+
+
+<div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 24px', fontFamily: 'var(--rv-font-sans, system-ui, sans-serif)' }}>
+
+# RV Design
+
+**{pkg.description}**
+
+<div style={{ display: 'flex', gap: '10px', margin: '20px 0', alignItems: 'center' }}>
+  <span style={{ display: 'inline-block', width: '28px', height: '28px', borderRadius: '6px', background: '#4A5C42' }} title="Forest green — primary" />
+  <span style={{ display: 'inline-block', width: '28px', height: '28px', borderRadius: '6px', background: '#A97844' }} title="Walnut — accent" />
+  <span style={{ display: 'inline-block', width: '28px', height: '28px', borderRadius: '6px', background: '#FAF9F7', border: '1px solid #D5CEC5' }} title="Warm ivory — surface" />
+  <span style={{ display: 'inline-block', width: '28px', height: '28px', borderRadius: '6px', background: '#1A1816' }} title="Charcoal — dark surface" />
+  <span style={{ color: '#888', fontSize: '14px' }}>v{pkg.version}</span>
+</div>
+
+---
+
+## Getting Started
+
+```bash
+npm install rv-design
+```
+
+**Register all components as a Vue plugin:**
+
+```ts
+import { createApp } from 'vue'
+import RvDesign from 'rv-design'
+import 'rv-design/styles.css'
+
+const app = createApp(App)
+app.use(RvDesign)
+app.mount('#app')
+```
+
+**Or import components individually:**
+
+```ts
+import { RvButton, RvInput } from 'rv-design'
+import 'rv-design/styles.css'
+```
+
+---
+
+## Theming
+
+RV Design supports three theme modes driven by the `data-theme` attribute on the root element:
+
+| Mode | Behaviour |
+|---|---|
+| *(not set)* | Follows the OS via `@media (prefers-color-scheme)` |
+| `data-theme="light"` | Pins the light palette |
+| `data-theme="dark"` | Pins the dark palette |
+
+Use the `useTheme()` composable to manage this at runtime:
+
+```ts
+import { useTheme } from 'rv-design'
+
+const { mode, setTheme, cycle } = useTheme()
+// mode.value → 'system' | 'light' | 'dark'
+setTheme('dark')
+cycle() // system → light → dark → system
+```
+
+> Use the **theme toggle** in the Storybook toolbar (sun / moon icon) to preview both modes on any story.
+
+---
+
+## Components
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px', margin: '24px 0' }}>
+
+<div style={{ padding: '16px', border: '1px solid #e5e0db', borderRadius: '8px' }}>
+  **Form Controls**
+  <ul style={{ margin: '8px 0 0', paddingLeft: '16px', fontSize: '14px', lineHeight: '1.8' }}>
+    <li>RvButton</li>
+    <li>RvInput</li>
+    <li>RvTextarea</li>
+    <li>RvSelect</li>
+    <li>RvCheckbox</li>
+    <li>RvRadio / RvRadioGroup</li>
+    <li>RvSwitch</li>
+    <li>RvFormField</li>
+  </ul>
+</div>
+
+<div style={{ padding: '16px', border: '1px solid #e5e0db', borderRadius: '8px' }}>
+  **Data Display**
+  <ul style={{ margin: '8px 0 0', paddingLeft: '16px', fontSize: '14px', lineHeight: '1.8' }}>
+    <li>RvHeading</li>
+    <li>RvCard</li>
+    <li>RvBadge</li>
+    <li>RvTag</li>
+    <li>RvAvatar</li>
+  </ul>
+</div>
+
+<div style={{ padding: '16px', border: '1px solid #e5e0db', borderRadius: '8px' }}>
+  **Feedback**
+  <ul style={{ margin: '8px 0 0', paddingLeft: '16px', fontSize: '14px', lineHeight: '1.8' }}>
+    <li>RvAlert</li>
+    <li>RvSpinner</li>
+    <li>RvTooltip</li>
+  </ul>
+</div>
+
+<div style={{ padding: '16px', border: '1px solid #e5e0db', borderRadius: '8px' }}>
+  **Navigation**
+  <ul style={{ margin: '8px 0 0', paddingLeft: '16px', fontSize: '14px', lineHeight: '1.8' }}>
+    <li>RvTabs</li>
+    <li>RvAccordion</li>
+    <li>RvDropdown</li>
+  </ul>
+</div>
+
+</div>
+
+---
+
+## Design Tokens
+
+All colours, spacing, radii, shadows, and motion values are CSS custom properties defined in `tokens/`. Components reference only semantic aliases, making full re-theming possible by overriding those aliases.
+
+| File | Contents |
+|---|---|
+| `tokens/colors.css` | Raw oklch palette + semantic surface/text/border aliases |
+| `tokens/typography.css` | Type scale, weights, line-heights |
+| `tokens/spacing.css` | 4 px base grid (`--rv-space-1` … `--rv-space-12`) |
+| `tokens/radius.css` | Border-radius tokens |
+| `tokens/elevation.css` | Shadow tokens |
+| `tokens/motion.css` | Easing curves and durations |
+
+---
+
+</div>

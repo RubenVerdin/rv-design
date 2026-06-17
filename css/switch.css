@@ -1,0 +1,45 @@
+/* RV Design — Switch */
+
+.rv-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rv-space-2);
+  cursor: pointer;
+  user-select: none;
+  font-size: var(--rv-text-md);
+  color: var(--rv-text-primary);
+}
+.rv-switch__track {
+  position: relative;
+  flex: none;
+  width: 2.25rem;
+  height: 1.25rem;
+  border-radius: var(--rv-radius-full);
+  background: var(--rv-border-strong);
+  transition: var(--rv-transition-control);
+}
+.rv-switch__thumb {
+  position: absolute;
+  top: 2px; left: 2px;
+  width: calc(1.25rem - 4px);
+  height: calc(1.25rem - 4px);
+  border-radius: var(--rv-radius-full);
+  background: #fff;
+  box-shadow: var(--rv-shadow-sm);
+  transition: transform var(--rv-duration-normal) var(--rv-ease-out);
+}
+.rv-switch--checked .rv-switch__track { background: var(--rv-accent); }
+.rv-switch--checked .rv-switch__thumb { transform: translateX(1rem); }
+
+.rv-switch--small .rv-switch__track { width: 1.75rem; height: 1rem; }
+.rv-switch--small .rv-switch__thumb { width: calc(1rem - 4px); height: calc(1rem - 4px); }
+.rv-switch--small.rv-switch--checked .rv-switch__thumb { transform: translateX(0.75rem); }
+
+.rv-switch--large .rv-switch__track { width: 2.75rem; height: 1.5rem; }
+.rv-switch--large .rv-switch__thumb { width: calc(1.5rem - 4px); height: calc(1.5rem - 4px); }
+.rv-switch--large.rv-switch--checked .rv-switch__thumb { transform: translateX(1.25rem); }
+
+.rv-switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+.rv-switch input:focus-visible + .rv-switch__track { box-shadow: var(--rv-ring); }
+
+.rv-switch--disabled { color: var(--rv-text-disabled); cursor: not-allowed; opacity: 0.6; }

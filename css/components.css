@@ -1,0 +1,18 @@
+/* RV Design — component stylesheet aggregator.
+   Shipped to consumers via styles.css. React components emit these classes. */
+
+@import "./base.css";
+@import "./heading.css";
+@import "./button.css";
+@import "./input.css";
+@import "./select.css";
+@import "./checkbox-radio.css";
+@import "./switch.css";
+@import "./card.css";
+@import "./badge-tag.css";
+@import "./avatar.css";
+@import "./alert.css";
+@import "./tabs.css";
+@import "./accordion.css";
+@import "./dropdown.css";
+@import "./tooltip.css";

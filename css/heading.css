@@ -1,0 +1,34 @@
+/* RV Design — Heading + text helpers
+   level → 1..6 ; also display variant for hero headings */
+
+.rv-heading {
+  font-family: var(--rv-font-sans);
+  color: var(--rv-text-primary);
+  font-weight: var(--rv-weight-bold);
+  letter-spacing: var(--rv-tracking-tight);
+  line-height: var(--rv-leading-tight);
+  margin: 0;
+  text-wrap: balance;
+}
+.rv-heading--1 { font-size: var(--rv-text-3xl); }
+.rv-heading--2 { font-size: var(--rv-text-2xl); }
+.rv-heading--3 { font-size: var(--rv-text-xl); }
+.rv-heading--4 { font-size: var(--rv-text-lg); font-weight: var(--rv-weight-semibold); }
+.rv-heading--5 { font-size: var(--rv-text-base); font-weight: var(--rv-weight-semibold); }
+.rv-heading--6 {
+  font-size: var(--rv-text-xs);
+  font-weight: var(--rv-weight-semibold);
+  letter-spacing: var(--rv-tracking-caps);
+  text-transform: uppercase;
+  color: var(--rv-text-muted);
+}
+.rv-heading--display {
+  font-size: var(--rv-text-4xl);
+  font-weight: var(--rv-weight-extra);
+  letter-spacing: -0.03em;
+}
+.rv-heading--accent { color: var(--rv-accent-text); }
+.rv-heading--muted  { color: var(--rv-text-muted); }
+
+.rv-text-muted    { color: var(--rv-text-muted); }
+.rv-text-secondary{ color: var(--rv-text-secondary); }

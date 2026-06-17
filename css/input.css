@@ -1,0 +1,79 @@
+/* RV Design — Text inputs (Input, Textarea) + FormField scaffolding */
+
+.rv-input {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rv-space-2);
+  width: 100%;
+  min-height: var(--rv-control-h-md);
+  padding-inline: var(--rv-control-px-md);
+  font-family: var(--rv-font-sans);
+  font-size: var(--rv-control-text-md);
+  color: var(--rv-text-primary);
+  background: var(--rv-surface-card);
+  border: var(--rv-border-width) solid var(--rv-border-default);
+  border-radius: var(--rv-radius-md);
+  transition: var(--rv-transition-control);
+}
+.rv-input:hover { border-color: var(--rv-border-strong); }
+.rv-input--focused,
+.rv-input:focus-within {
+  border-color: var(--rv-accent);
+  box-shadow: var(--rv-ring);
+}
+
+.rv-input__field {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+}
+.rv-input__field::placeholder { color: var(--rv-text-disabled); }
+
+.rv-input__affix {
+  display: inline-flex;
+  align-items: center;
+  color: var(--rv-text-muted);
+  flex: none;
+}
+.rv-input__affix svg { width: var(--rv-icon-md); height: var(--rv-icon-md); display: block; }
+
+/* sizes */
+.rv-input--small  { min-height: var(--rv-control-h-sm); padding-inline: var(--rv-control-px-sm); font-size: var(--rv-control-text-sm); }
+.rv-input--large  { min-height: var(--rv-control-h-lg); padding-inline: var(--rv-control-px-lg); font-size: var(--rv-control-text-lg); }
+
+/* textarea */
+.rv-input--textarea { align-items: stretch; padding-block: var(--rv-space-2); height: auto; }
+.rv-input--textarea .rv-input__field { resize: vertical; line-height: var(--rv-leading-normal); min-height: 4.5em; }
+
+/* status */
+.rv-input--error   { border-color: var(--rv-color-error); }
+.rv-input--error.rv-input:focus-within { box-shadow: 0 0 0 var(--rv-ring-width) color-mix(in oklab, var(--rv-color-error) 40%, transparent); }
+.rv-input--success { border-color: var(--rv-color-success); }
+
+/* disabled */
+.rv-input--disabled {
+  background: var(--rv-surface-sunken);
+  color: var(--rv-text-disabled);
+  cursor: not-allowed;
+}
+.rv-input--disabled .rv-input__field { cursor: not-allowed; }
+.rv-input--disabled:hover { border-color: var(--rv-border-default); }
+
+/* ---- FormField (label + help + error) -------------------------------- */
+.rv-field { display: flex; flex-direction: column; gap: var(--rv-space-2); }
+.rv-field__label {
+  font-size: var(--rv-text-sm);
+  font-weight: var(--rv-weight-medium);
+  color: var(--rv-text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rv-space-1);
+}
+.rv-field__required { color: var(--rv-color-error); }
+.rv-field__help { font-size: var(--rv-text-xs); color: var(--rv-text-muted); }
+.rv-field__error { font-size: var(--rv-text-xs); color: var(--rv-color-error-fg); }

@@ -1,0 +1,59 @@
+/* RV Design — Accordion */
+
+.rv-accordion { display: flex; flex-direction: column; }
+.rv-accordion--bordered {
+  border: var(--rv-border-width) solid var(--rv-border-default);
+  border-radius: var(--rv-radius-lg);
+  overflow: hidden;
+}
+.rv-accordion--separated { gap: var(--rv-space-2); }
+.rv-accordion--separated .rv-accordion__item {
+  border: var(--rv-border-width) solid var(--rv-border-default);
+  border-radius: var(--rv-radius-md);
+}
+
+.rv-accordion__item { border-bottom: var(--rv-border-width) solid var(--rv-border-subtle); }
+.rv-accordion__item:last-child { border-bottom: none; }
+.rv-accordion--separated .rv-accordion__item:last-child { border-bottom: var(--rv-border-width) solid var(--rv-border-default); }
+
+.rv-accordion__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--rv-space-3);
+  padding: var(--rv-space-4) var(--rv-space-4);
+  background: none;
+  border: none;
+  font-family: var(--rv-font-sans);
+  font-size: var(--rv-text-md);
+  font-weight: var(--rv-weight-medium);
+  color: var(--rv-text-primary);
+  cursor: pointer;
+  text-align: left;
+  transition: var(--rv-transition-control);
+}
+.rv-accordion__header:hover { background: var(--rv-state-hover); }
+.rv-accordion__header:focus-visible { outline: none; box-shadow: inset var(--rv-ring); }
+
+.rv-accordion__title { flex: 1 1 auto; }
+.rv-accordion__chev {
+  flex: none;
+  color: var(--rv-text-muted);
+  transition: transform var(--rv-duration-normal) var(--rv-ease-out);
+}
+.rv-accordion__item--open .rv-accordion__chev { transform: rotate(90deg); color: var(--rv-accent-text); }
+.rv-accordion__item--open > .rv-accordion__header { color: var(--rv-accent-text); }
+
+.rv-accordion__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--rv-duration-normal) var(--rv-ease-out);
+}
+.rv-accordion__item--open .rv-accordion__panel { grid-template-rows: 1fr; }
+.rv-accordion__panel-inner { overflow: hidden; }
+.rv-accordion__content {
+  padding: 0 var(--rv-space-4) var(--rv-space-4);
+  color: var(--rv-text-secondary);
+  font-size: var(--rv-text-md);
+  line-height: var(--rv-leading-relaxed);
+}

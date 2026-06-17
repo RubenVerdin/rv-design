@@ -1,0 +1,11 @@
+# Files excluded from the published npm tarball.
+# The package ships: dist/, src/, styles.css, tokens/, css/, readme.md, package.json
+vite.config.ts
+tsconfig.json
+eslint.config.js
+.stylelintrc.json
+.gitignore
+PACKAGE.md
+.storybook/
+stories/
+storybook-static/

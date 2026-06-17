@@ -1,0 +1,28 @@
+/* RV Design — Avatar */
+
+.rv-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  overflow: hidden;
+  background: var(--rv-surface-sunken);
+  color: var(--rv-text-secondary);
+  font-weight: var(--rv-weight-semibold);
+  border-radius: var(--rv-radius-full);
+  width: 2.25rem; height: 2.25rem;
+  font-size: var(--rv-text-sm);
+  user-select: none;
+}
+.rv-avatar--tiny   { width: 1.5rem;  height: 1.5rem;  font-size: var(--rv-text-2xs); }
+.rv-avatar--small  { width: 1.875rem; height: 1.875rem; font-size: var(--rv-text-xs); }
+.rv-avatar--large  { width: 3rem;    height: 3rem;    font-size: var(--rv-text-lg); }
+.rv-avatar--xl     { width: 4rem;    height: 4rem;    font-size: var(--rv-text-xl); }
+.rv-avatar--square { border-radius: var(--rv-radius-md); }
+.rv-avatar--rounded{ border-radius: var(--rv-radius-lg); }
+.rv-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rv-avatar--accent { background: var(--rv-accent-subtle); color: var(--rv-accent-text); }
+
+.rv-avatar-group { display: inline-flex; }
+.rv-avatar-group .rv-avatar { box-shadow: 0 0 0 2px var(--rv-surface-card); }
+.rv-avatar-group .rv-avatar + .rv-avatar { margin-left: -0.6rem; }

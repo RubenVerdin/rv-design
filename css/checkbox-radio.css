@@ -1,0 +1,54 @@
+/* RV Design — Checkbox & Radio */
+
+.rv-choice {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rv-space-2);
+  font-size: var(--rv-text-md);
+  color: var(--rv-text-primary);
+  cursor: pointer;
+  user-select: none;
+}
+.rv-choice__box {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 1.05rem;
+  height: 1.05rem;
+  background: var(--rv-surface-card);
+  border: var(--rv-border-width-strong) solid var(--rv-border-strong);
+  transition: var(--rv-transition-control);
+}
+.rv-choice--checkbox .rv-choice__box { border-radius: var(--rv-radius-xs); }
+.rv-choice--radio .rv-choice__box    { border-radius: var(--rv-radius-full); }
+
+.rv-choice__box svg { width: 0.7rem; height: 0.7rem; color: #fff; opacity: 0; transform: scale(0.6); transition: var(--rv-transition-control); }
+.rv-choice__dot { width: 0.45rem; height: 0.45rem; border-radius: var(--rv-radius-full); background: #fff; opacity: 0; transform: scale(0.4); transition: var(--rv-transition-control); }
+
+.rv-choice:hover .rv-choice__box { border-color: var(--rv-accent); }
+
+.rv-choice--checked .rv-choice__box {
+  background: var(--rv-accent);
+  border-color: var(--rv-accent);
+}
+.rv-choice--checked .rv-choice__box svg,
+.rv-choice--checked .rv-choice__dot { opacity: 1; transform: scale(1); }
+
+.rv-choice--indeterminate .rv-choice__box {
+  background: var(--rv-accent);
+  border-color: var(--rv-accent);
+}
+.rv-choice--indeterminate .rv-choice__box::after {
+  content: ""; width: 0.55rem; height: 2px; border-radius: 1px; background: #fff;
+}
+
+.rv-choice input { position: absolute; opacity: 0; width: 0; height: 0; }
+.rv-choice input:focus-visible + .rv-choice__box { box-shadow: var(--rv-ring); }
+
+.rv-choice--disabled { color: var(--rv-text-disabled); cursor: not-allowed; }
+.rv-choice--disabled .rv-choice__box { background: var(--rv-surface-sunken); border-color: var(--rv-border-default); }
+.rv-choice--disabled.rv-choice--checked .rv-choice__box { background: var(--rv-text-disabled); border-color: var(--rv-text-disabled); }
+
+/* group */
+.rv-choice-group { display: inline-flex; gap: var(--rv-space-4); }
+.rv-choice-group--vertical { flex-direction: column; gap: var(--rv-space-3); }

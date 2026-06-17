@@ -1,0 +1,456 @@
+/* =========================================================================
+   RV Design — Color tokens
+   Natural / architectural palette:
+     Primary  forest green   #4A5C42
+     Dark     charcoal       #1A1816   (text + dark surfaces)
+     Light    warm ivory     #FAF9F7   (page background, not pure white)
+     Neutral  stone / taupe  #D5CEC5   (borders, dividers, 2nd surfaces)
+     Accent   walnut caramel #A97844
+
+   - Raw palette scales are theme-independent (oklch). Neutrals are WARM
+     (taupe hue ~74) rather than cool SaaS gray.
+   - Semantic aliases under :root            → LIGHT theme (default).
+   - Semantic aliases under [data-theme=dark] → DARK theme.
+   Components reference ONLY the semantic aliases + per-type color tokens,
+   so re-theming + dark mode happen by overriding this file alone.
+   Toggle dark mode:  document.documentElement.dataset.theme = 'dark'
+   ========================================================================= */
+
+:root {
+  /* ---- Neutral / stone scale (warm taupe) ------------------------------- */
+  --rv-neutral-0:   #ffffff;
+  --rv-neutral-50:  oklch(0.984 0.0030 82);  /* ivory  #FAF9F7 */
+  --rv-neutral-100: oklch(0.968 0.0040 80);
+  --rv-neutral-150: oklch(0.949 0.0050 78);
+  --rv-neutral-200: oklch(0.922 0.0070 76);
+  --rv-neutral-300: oklch(0.862 0.0120 75);  /* stone  #D5CEC5 */
+  --rv-neutral-400: oklch(0.732 0.0140 73);
+  --rv-neutral-500: oklch(0.586 0.0140 70);
+  --rv-neutral-600: oklch(0.472 0.0130 68);
+  --rv-neutral-700: oklch(0.392 0.0120 66);
+  --rv-neutral-800: oklch(0.298 0.0100 64);
+  --rv-neutral-850: oklch(0.248 0.0090 62);
+  --rv-neutral-900: oklch(0.212 0.0080 60);
+  --rv-neutral-925: oklch(0.190 0.0070 60);  /* charcoal #1A1816 */
+  --rv-neutral-950: oklch(0.168 0.0060 58);
+  --rv-neutral-975: oklch(0.144 0.0050 58);
+
+  /* ---- Primary (forest green) ------------------------------------------- */
+  --rv-primary-50:  oklch(0.962 0.0140 142);
+  --rv-primary-100: oklch(0.930 0.0250 141);
+  --rv-primary-200: oklch(0.878 0.0360 140);
+  --rv-primary-300: oklch(0.792 0.0440 139);
+  --rv-primary-400: oklch(0.648 0.0500 138);
+  --rv-primary-500: oklch(0.540 0.0500 137);
+  --rv-primary-600: oklch(0.470 0.0470 137);  /* #4A5C42 */
+  --rv-primary-700: oklch(0.408 0.0420 138);
+  --rv-primary-800: oklch(0.348 0.0360 139);
+  --rv-primary-900: oklch(0.298 0.0290 140);
+  --rv-primary-950: oklch(0.224 0.0210 141);
+
+  /* ---- Accent (walnut / caramel) ---------------------------------------- */
+  --rv-walnut-50:  oklch(0.964 0.0180 72);
+  --rv-walnut-100: oklch(0.930 0.0340 70);
+  --rv-walnut-200: oklch(0.878 0.0520 68);
+  --rv-walnut-300: oklch(0.798 0.0700 66);
+  --rv-walnut-400: oklch(0.706 0.0840 64);
+  --rv-walnut-500: oklch(0.642 0.0900 63);
+  --rv-walnut-600: oklch(0.598 0.0900 62);   /* #A97844 */
+  --rv-walnut-700: oklch(0.518 0.0780 61);
+  --rv-walnut-800: oklch(0.442 0.0640 61);
+  --rv-walnut-900: oklch(0.382 0.0520 62);
+  --rv-walnut-950: oklch(0.280 0.0380 63);
+
+  /* ---- Info (muted slate blue) ------------------------------------------ */
+  --rv-info-50:   oklch(0.972 0.0140 248);
+  --rv-info-100:  oklch(0.930 0.0400 248);
+  --rv-info-300:  oklch(0.780 0.0900 250);
+  --rv-info-400:  oklch(0.680 0.1120 252);
+  --rv-info-500:  oklch(0.600 0.1180 254);
+  --rv-info-600:  oklch(0.532 0.1180 256);
+  --rv-info-700:  oklch(0.462 0.1040 257);
+
+  /* ---- Success (clean green, distinct from forest) ---------------------- */
+  --rv-success-50:  oklch(0.966 0.0260 152);
+  --rv-success-100: oklch(0.922 0.0580 152);
+  --rv-success-400: oklch(0.740 0.1300 150);
+  --rv-success-500: oklch(0.660 0.1360 150);
+  --rv-success-600: oklch(0.578 0.1220 150);
+  --rv-success-700: oklch(0.492 0.1020 150);
+
+  /* ---- Warning (ochre / amber, in the walnut family) -------------------- */
+  --rv-warning-50:  oklch(0.978 0.0300 86);
+  --rv-warning-100: oklch(0.945 0.0760 84);
+  --rv-warning-400: oklch(0.812 0.1300 78);
+  --rv-warning-500: oklch(0.762 0.1320 74);
+  --rv-warning-600: oklch(0.688 0.1300 68);
+  --rv-warning-700: oklch(0.558 0.1120 62);
+
+  /* ---- Error (terracotta / brick red) ----------------------------------- */
+  --rv-error-50:   oklch(0.968 0.0160 28);
+  --rv-error-100:  oklch(0.924 0.0440 28);
+  --rv-error-400:  oklch(0.652 0.1640 30);
+  --rv-error-500:  oklch(0.592 0.1820 31);
+  --rv-error-600:  oklch(0.536 0.1840 32);
+  --rv-error-700:  oklch(0.470 0.1620 32);
+
+  /* =======================================================================
+     LIGHT THEME — semantic aliases
+     ======================================================================= */
+
+  /* Surfaces */
+  --rv-surface-page:     var(--rv-neutral-50);   /* ivory */
+  --rv-surface-card:     var(--rv-neutral-0);     /* white cards on ivory */
+  --rv-surface-raised:   var(--rv-neutral-0);
+  --rv-surface-sunken:   var(--rv-neutral-100);
+  --rv-surface-inset:    var(--rv-neutral-150);
+  --rv-surface-overlay:  color-mix(in oklab, var(--rv-neutral-950) 42%, transparent);
+  --rv-surface-inverse:  var(--rv-neutral-900);
+
+  /* Text */
+  --rv-text-primary:    var(--rv-neutral-925);    /* charcoal */
+  --rv-text-secondary:  var(--rv-neutral-700);
+  --rv-text-muted:      var(--rv-neutral-500);
+  --rv-text-disabled:   var(--rv-neutral-400);
+  --rv-text-inverse:    var(--rv-neutral-50);
+  --rv-text-link:       var(--rv-primary-700);
+  --rv-text-on-accent:  var(--rv-neutral-50);
+
+  /* Borders */
+  --rv-border-subtle:   var(--rv-neutral-150);
+  --rv-border-default:  var(--rv-neutral-200);
+  --rv-border-strong:   var(--rv-neutral-300);    /* stone */
+  --rv-border-inverse:  var(--rv-neutral-700);
+
+  /* Accent / brand (forest green) */
+  --rv-accent:          var(--rv-primary-600);
+  --rv-accent-hover:    var(--rv-primary-700);
+  --rv-accent-active:   var(--rv-primary-800);
+  --rv-accent-subtle:   var(--rv-primary-50);
+  --rv-accent-text:     var(--rv-primary-700);
+
+  /* Warm accent (walnut) — secondary brand expression */
+  --rv-accent-warm:        var(--rv-walnut-600);
+  --rv-accent-warm-hover:  var(--rv-walnut-700);
+  --rv-accent-warm-active: var(--rv-walnut-800);
+  --rv-accent-warm-subtle: var(--rv-walnut-50);
+  --rv-accent-warm-text:   var(--rv-walnut-700);
+
+  /* Focus ring */
+  --rv-focus-ring:      color-mix(in oklab, var(--rv-primary-500) 50%, transparent);
+
+  /* Neutral interactive state fills */
+  --rv-state-hover:     color-mix(in oklab, var(--rv-neutral-925) 6%, transparent);
+  --rv-state-active:    color-mix(in oklab, var(--rv-neutral-925) 11%, transparent);
+  --rv-state-selected:  var(--rv-primary-50);
+
+  /* Per-type color → (solid fill, hover fill, text/fg color) ------------- */
+  --rv-color-default:        var(--rv-neutral-200);
+  --rv-color-default-hover:  var(--rv-neutral-300);
+  --rv-color-default-fg:     var(--rv-neutral-800);
+
+  --rv-color-primary:        var(--rv-primary-600);
+  --rv-color-primary-hover:  var(--rv-primary-700);
+  --rv-color-primary-fg:     var(--rv-primary-700);
+
+  --rv-color-info:           var(--rv-info-600);
+  --rv-color-info-hover:     var(--rv-info-700);
+  --rv-color-info-fg:        var(--rv-info-700);
+
+  --rv-color-success:        var(--rv-success-600);
+  --rv-color-success-hover:  var(--rv-success-700);
+  --rv-color-success-fg:     var(--rv-success-700);
+
+  --rv-color-warning:        var(--rv-warning-500);
+  --rv-color-warning-hover:  var(--rv-warning-600);
+  --rv-color-warning-fg:     var(--rv-warning-700);
+
+  --rv-color-error:          var(--rv-error-600);
+  --rv-color-error-hover:    var(--rv-error-700);
+  --rv-color-error-fg:       var(--rv-error-700);
+
+  /* Soft / message backgrounds */
+  --rv-success-bg:  var(--rv-success-50);
+  --rv-warning-bg:  var(--rv-warning-50);
+  --rv-danger-bg:   var(--rv-error-50);
+  --rv-info-bg:     var(--rv-info-50);
+
+  /* Convenience aliases */
+  --rv-success-text: var(--rv-color-success-fg);
+  --rv-warning-text: var(--rv-color-warning-fg);
+  --rv-danger-text:  var(--rv-color-error-fg);
+  --rv-danger:       var(--rv-color-error);
+  --rv-danger-hover: var(--rv-color-error-hover);
+  --rv-info-text:    var(--rv-color-info-fg);
+
+  color-scheme: light;
+}
+
+/* =========================================================================
+   SYSTEM PREFERENCE — auto dark when the OS asks for it.
+   Plain :root so the compiler registers these as real theme tokens.
+   Placed BEFORE the explicit [data-theme] blocks so a manual pin
+   (data-theme="light" | "dark") always wins over the OS preference,
+   including on nested theme scopes. Mirrors [data-theme="dark"] — keep in sync.
+   ========================================================================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+  /* Surfaces — warm near-black charcoal */
+  --rv-surface-page:     var(--rv-neutral-975);
+  --rv-surface-card:     var(--rv-neutral-925);   /* #1A1816 */
+  --rv-surface-raised:   var(--rv-neutral-900);
+  --rv-surface-sunken:   var(--rv-neutral-950);
+  --rv-surface-inset:    var(--rv-neutral-850);
+  --rv-surface-overlay:  color-mix(in oklab, #000 64%, transparent);
+  --rv-surface-inverse:  var(--rv-neutral-100);
+
+  /* Text — warm ivory */
+  --rv-text-primary:    oklch(0.962 0.0040 82);
+  --rv-text-secondary:  oklch(0.776 0.0070 76);
+  --rv-text-muted:      oklch(0.610 0.0090 72);
+  --rv-text-disabled:   oklch(0.452 0.0090 68);
+  --rv-text-inverse:    var(--rv-neutral-925);
+  --rv-text-link:       var(--rv-primary-400);
+  --rv-text-on-accent:  var(--rv-neutral-975);
+
+  /* Borders — warm translucent ivory */
+  --rv-border-subtle:   color-mix(in oklab, var(--rv-neutral-50) 8%, transparent);
+  --rv-border-default:  color-mix(in oklab, var(--rv-neutral-50) 12%, transparent);
+  --rv-border-strong:   color-mix(in oklab, var(--rv-neutral-50) 20%, transparent);
+  --rv-border-inverse:  var(--rv-neutral-300);
+
+  /* Accent — forest green brightens on charcoal */
+  --rv-accent:          var(--rv-primary-400);
+  --rv-accent-hover:    var(--rv-primary-300);
+  --rv-accent-active:   var(--rv-primary-200);
+  --rv-accent-subtle:   color-mix(in oklab, var(--rv-primary-400) 20%, transparent);
+  --rv-accent-text:     var(--rv-primary-300);
+
+  /* Warm accent — walnut brightens */
+  --rv-accent-warm:        var(--rv-walnut-400);
+  --rv-accent-warm-hover:  var(--rv-walnut-300);
+  --rv-accent-warm-active: var(--rv-walnut-200);
+  --rv-accent-warm-subtle: color-mix(in oklab, var(--rv-walnut-400) 22%, transparent);
+  --rv-accent-warm-text:   var(--rv-walnut-300);
+
+  --rv-focus-ring:      color-mix(in oklab, var(--rv-primary-400) 55%, transparent);
+
+  --rv-state-hover:     color-mix(in oklab, var(--rv-neutral-50) 8%, transparent);
+  --rv-state-active:    color-mix(in oklab, var(--rv-neutral-50) 14%, transparent);
+  --rv-state-selected:  color-mix(in oklab, var(--rv-primary-400) 22%, transparent);
+
+  /* Per-type — solid fills stay saturated; text colors brighten */
+  --rv-color-default:        color-mix(in oklab, var(--rv-neutral-50) 14%, transparent);
+  --rv-color-default-hover:  color-mix(in oklab, var(--rv-neutral-50) 20%, transparent);
+  --rv-color-default-fg:     oklch(0.902 0.0050 80);
+
+  --rv-color-primary:        var(--rv-primary-500);
+  --rv-color-primary-hover:  var(--rv-primary-400);
+  --rv-color-primary-fg:     var(--rv-primary-300);
+
+  --rv-color-info:           var(--rv-info-500);
+  --rv-color-info-hover:     var(--rv-info-400);
+  --rv-color-info-fg:        var(--rv-info-400);
+
+  --rv-color-success:        var(--rv-success-500);
+  --rv-color-success-hover:  var(--rv-success-400);
+  --rv-color-success-fg:     var(--rv-success-400);
+
+  --rv-color-warning:        var(--rv-warning-500);
+  --rv-color-warning-hover:  var(--rv-warning-400);
+  --rv-color-warning-fg:     var(--rv-warning-400);
+
+  --rv-color-error:          var(--rv-error-500);
+  --rv-color-error-hover:    var(--rv-error-400);
+  --rv-color-error-fg:       var(--rv-error-400);
+
+  /* Soft backgrounds — tint the hue into the card surface */
+  --rv-success-bg:  color-mix(in oklab, var(--rv-success-500) 16%, var(--rv-surface-card));
+  --rv-warning-bg:  color-mix(in oklab, var(--rv-warning-500) 16%, var(--rv-surface-card));
+  --rv-danger-bg:   color-mix(in oklab, var(--rv-error-500) 16%, var(--rv-surface-card));
+  --rv-info-bg:     color-mix(in oklab, var(--rv-info-500) 16%, var(--rv-surface-card));
+
+  color-scheme: dark;
+  }
+}
+
+/* =========================================================================
+   DARK THEME — explicit pin (raw palette stays the same)
+   Charcoal #1A1816 surfaces, warm ivory text, brighter green + walnut.
+   ========================================================================= */
+[data-theme="dark"] {
+  /* Surfaces — warm near-black charcoal */
+  --rv-surface-page:     var(--rv-neutral-975);
+  --rv-surface-card:     var(--rv-neutral-925);   /* #1A1816 */
+  --rv-surface-raised:   var(--rv-neutral-900);
+  --rv-surface-sunken:   var(--rv-neutral-950);
+  --rv-surface-inset:    var(--rv-neutral-850);
+  --rv-surface-overlay:  color-mix(in oklab, #000 64%, transparent);
+  --rv-surface-inverse:  var(--rv-neutral-100);
+
+  /* Text — warm ivory */
+  --rv-text-primary:    oklch(0.962 0.0040 82);
+  --rv-text-secondary:  oklch(0.776 0.0070 76);
+  --rv-text-muted:      oklch(0.610 0.0090 72);
+  --rv-text-disabled:   oklch(0.452 0.0090 68);
+  --rv-text-inverse:    var(--rv-neutral-925);
+  --rv-text-link:       var(--rv-primary-400);
+  --rv-text-on-accent:  var(--rv-neutral-975);
+
+  /* Borders — warm translucent ivory */
+  --rv-border-subtle:   color-mix(in oklab, var(--rv-neutral-50) 8%, transparent);
+  --rv-border-default:  color-mix(in oklab, var(--rv-neutral-50) 12%, transparent);
+  --rv-border-strong:   color-mix(in oklab, var(--rv-neutral-50) 20%, transparent);
+  --rv-border-inverse:  var(--rv-neutral-300);
+
+  /* Accent — forest green brightens on charcoal */
+  --rv-accent:          var(--rv-primary-400);
+  --rv-accent-hover:    var(--rv-primary-300);
+  --rv-accent-active:   var(--rv-primary-200);
+  --rv-accent-subtle:   color-mix(in oklab, var(--rv-primary-400) 20%, transparent);
+  --rv-accent-text:     var(--rv-primary-300);
+
+  /* Warm accent — walnut brightens */
+  --rv-accent-warm:        var(--rv-walnut-400);
+  --rv-accent-warm-hover:  var(--rv-walnut-300);
+  --rv-accent-warm-active: var(--rv-walnut-200);
+  --rv-accent-warm-subtle: color-mix(in oklab, var(--rv-walnut-400) 22%, transparent);
+  --rv-accent-warm-text:   var(--rv-walnut-300);
+
+  --rv-focus-ring:      color-mix(in oklab, var(--rv-primary-400) 55%, transparent);
+
+  --rv-state-hover:     color-mix(in oklab, var(--rv-neutral-50) 8%, transparent);
+  --rv-state-active:    color-mix(in oklab, var(--rv-neutral-50) 14%, transparent);
+  --rv-state-selected:  color-mix(in oklab, var(--rv-primary-400) 22%, transparent);
+
+  /* Per-type — solid fills stay saturated; text colors brighten */
+  --rv-color-default:        color-mix(in oklab, var(--rv-neutral-50) 14%, transparent);
+  --rv-color-default-hover:  color-mix(in oklab, var(--rv-neutral-50) 20%, transparent);
+  --rv-color-default-fg:     oklch(0.902 0.0050 80);
+
+  --rv-color-primary:        var(--rv-primary-500);
+  --rv-color-primary-hover:  var(--rv-primary-400);
+  --rv-color-primary-fg:     var(--rv-primary-300);
+
+  --rv-color-info:           var(--rv-info-500);
+  --rv-color-info-hover:     var(--rv-info-400);
+  --rv-color-info-fg:        var(--rv-info-400);
+
+  --rv-color-success:        var(--rv-success-500);
+  --rv-color-success-hover:  var(--rv-success-400);
+  --rv-color-success-fg:     var(--rv-success-400);
+
+  --rv-color-warning:        var(--rv-warning-500);
+  --rv-color-warning-hover:  var(--rv-warning-400);
+  --rv-color-warning-fg:     var(--rv-warning-400);
+
+  --rv-color-error:          var(--rv-error-500);
+  --rv-color-error-hover:    var(--rv-error-400);
+  --rv-color-error-fg:       var(--rv-error-400);
+
+  /* Soft backgrounds — tint the hue into the card surface */
+  --rv-success-bg:  color-mix(in oklab, var(--rv-success-500) 16%, var(--rv-surface-card));
+  --rv-warning-bg:  color-mix(in oklab, var(--rv-warning-500) 16%, var(--rv-surface-card));
+  --rv-danger-bg:   color-mix(in oklab, var(--rv-error-500) 16%, var(--rv-surface-card));
+  --rv-info-bg:     color-mix(in oklab, var(--rv-info-500) 16%, var(--rv-surface-card));
+
+  color-scheme: dark;
+}
+
+/* =========================================================================
+   LIGHT THEME — explicit pin
+   Duplicates the :root defaults so a data-theme="light" scope nested inside
+   a system-dark page (or a dark ancestor) renders light correctly.
+   ========================================================================= */
+[data-theme="light"] {
+  /* =======================================================================
+     LIGHT THEME — semantic aliases
+     ======================================================================= */
+
+  /* Surfaces */
+  --rv-surface-page:     var(--rv-neutral-50);   /* ivory */
+  --rv-surface-card:     var(--rv-neutral-0);     /* white cards on ivory */
+  --rv-surface-raised:   var(--rv-neutral-0);
+  --rv-surface-sunken:   var(--rv-neutral-100);
+  --rv-surface-inset:    var(--rv-neutral-150);
+  --rv-surface-overlay:  color-mix(in oklab, var(--rv-neutral-950) 42%, transparent);
+  --rv-surface-inverse:  var(--rv-neutral-900);
+
+  /* Text */
+  --rv-text-primary:    var(--rv-neutral-925);    /* charcoal */
+  --rv-text-secondary:  var(--rv-neutral-700);
+  --rv-text-muted:      var(--rv-neutral-500);
+  --rv-text-disabled:   var(--rv-neutral-400);
+  --rv-text-inverse:    var(--rv-neutral-50);
+  --rv-text-link:       var(--rv-primary-700);
+  --rv-text-on-accent:  var(--rv-neutral-50);
+
+  /* Borders */
+  --rv-border-subtle:   var(--rv-neutral-150);
+  --rv-border-default:  var(--rv-neutral-200);
+  --rv-border-strong:   var(--rv-neutral-300);    /* stone */
+  --rv-border-inverse:  var(--rv-neutral-700);
+
+  /* Accent / brand (forest green) */
+  --rv-accent:          var(--rv-primary-600);
+  --rv-accent-hover:    var(--rv-primary-700);
+  --rv-accent-active:   var(--rv-primary-800);
+  --rv-accent-subtle:   var(--rv-primary-50);
+  --rv-accent-text:     var(--rv-primary-700);
+
+  /* Warm accent (walnut) — secondary brand expression */
+  --rv-accent-warm:        var(--rv-walnut-600);
+  --rv-accent-warm-hover:  var(--rv-walnut-700);
+  --rv-accent-warm-active: var(--rv-walnut-800);
+  --rv-accent-warm-subtle: var(--rv-walnut-50);
+  --rv-accent-warm-text:   var(--rv-walnut-700);
+
+  /* Focus ring */
+  --rv-focus-ring:      color-mix(in oklab, var(--rv-primary-500) 50%, transparent);
+
+  /* Neutral interactive state fills */
+  --rv-state-hover:     color-mix(in oklab, var(--rv-neutral-925) 6%, transparent);
+  --rv-state-active:    color-mix(in oklab, var(--rv-neutral-925) 11%, transparent);
+  --rv-state-selected:  var(--rv-primary-50);
+
+  /* Per-type color → (solid fill, hover fill, text/fg color) ------------- */
+  --rv-color-default:        var(--rv-neutral-200);
+  --rv-color-default-hover:  var(--rv-neutral-300);
+  --rv-color-default-fg:     var(--rv-neutral-800);
+
+  --rv-color-primary:        var(--rv-primary-600);
+  --rv-color-primary-hover:  var(--rv-primary-700);
+  --rv-color-primary-fg:     var(--rv-primary-700);
+
+  --rv-color-info:           var(--rv-info-600);
+  --rv-color-info-hover:     var(--rv-info-700);
+  --rv-color-info-fg:        var(--rv-info-700);
+
+  --rv-color-success:        var(--rv-success-600);
+  --rv-color-success-hover:  var(--rv-success-700);
+  --rv-color-success-fg:     var(--rv-success-700);
+
+  --rv-color-warning:        var(--rv-warning-500);
+  --rv-color-warning-hover:  var(--rv-warning-600);
+  --rv-color-warning-fg:     var(--rv-warning-700);
+
+  --rv-color-error:          var(--rv-error-600);
+  --rv-color-error-hover:    var(--rv-error-700);
+  --rv-color-error-fg:       var(--rv-error-700);
+
+  /* Soft / message backgrounds */
+  --rv-success-bg:  var(--rv-success-50);
+  --rv-warning-bg:  var(--rv-warning-50);
+  --rv-danger-bg:   var(--rv-error-50);
+  --rv-info-bg:     var(--rv-info-50);
+
+  /* Convenience aliases */
+  --rv-success-text: var(--rv-color-success-fg);
+  --rv-warning-text: var(--rv-color-warning-fg);
+  --rv-danger-text:  var(--rv-color-error-fg);
+  --rv-danger:       var(--rv-color-error);
+  --rv-danger-hover: var(--rv-color-error-hover);
+  --rv-info-text:    var(--rv-color-info-fg);
+
+  color-scheme: light;
+}

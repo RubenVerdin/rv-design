@@ -1,0 +1,15 @@
+/* =========================================================================
+   RV Design — Border radius tokens
+   Calm, slightly rounded. --rv-radius-md is the component default.
+   ========================================================================= */
+
+:root {
+  --rv-radius-none: 0;
+  --rv-radius-xs:  0.1875rem;  /* 3  */
+  --rv-radius-sm:  0.3125rem;  /* 5  */
+  --rv-radius-md:  0.4375rem;  /* 7  — default control radius */
+  --rv-radius-lg:  0.625rem;   /* 10 — cards */
+  --rv-radius-xl:  0.875rem;   /* 14 — large surfaces */
+  --rv-radius-2xl: 1.25rem;    /* 20 */
+  --rv-radius-full: 999px;     /* pills / avatars */
+}

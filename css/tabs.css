@@ -1,0 +1,57 @@
+/* RV Design — Tabs */
+
+.rv-tabs { display: flex; flex-direction: column; gap: var(--rv-space-4); }
+.rv-tabs__list {
+  display: flex;
+  gap: var(--rv-space-1);
+  position: relative;
+}
+.rv-tabs--line .rv-tabs__list { border-bottom: var(--rv-border-width) solid var(--rv-border-default); gap: var(--rv-space-5); }
+
+.rv-tab {
+  appearance: none;
+  background: none;
+  border: none;
+  font-family: var(--rv-font-sans);
+  font-size: var(--rv-text-md);
+  font-weight: var(--rv-weight-medium);
+  color: var(--rv-text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rv-space-2);
+  transition: var(--rv-transition-control);
+}
+.rv-tab:hover { color: var(--rv-text-primary); }
+.rv-tab--active { color: var(--rv-text-primary); }
+.rv-tab:focus-visible { outline: none; box-shadow: var(--rv-ring); border-radius: var(--rv-radius-sm); }
+
+/* line variant */
+.rv-tabs--line .rv-tab {
+  padding: var(--rv-space-2) 0 calc(var(--rv-space-2) + 1px);
+  margin-bottom: -1px;
+  border-bottom: 2px solid transparent;
+}
+.rv-tabs--line .rv-tab--active { color: var(--rv-accent-text); border-bottom-color: var(--rv-accent); }
+
+/* segment variant */
+.rv-tabs--segment .rv-tabs__list {
+  background: var(--rv-surface-sunken);
+  padding: var(--rv-space-1);
+  border-radius: var(--rv-radius-md);
+  gap: 2px;
+  align-self: flex-start;
+}
+.rv-tabs--segment .rv-tab {
+  padding: var(--rv-space-1) var(--rv-space-3);
+  height: 1.875rem;
+  border-radius: var(--rv-radius-sm);
+}
+.rv-tabs--segment .rv-tab--active {
+  background: var(--rv-surface-card);
+  color: var(--rv-text-primary);
+  box-shadow: var(--rv-shadow-sm);
+}
+
+.rv-tab--disabled { color: var(--rv-text-disabled); cursor: not-allowed; pointer-events: none; }
+.rv-tabs__panel { color: var(--rv-text-secondary); }
