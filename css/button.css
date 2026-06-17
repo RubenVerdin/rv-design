@@ -1,9 +1,7 @@
-/* RV Design — Button (no component-scope custom properties; explicit
-   type x variant rules read the registered semantic tokens directly).
-   type   -> default | primary | info | success | warning | error
-   variant-> solid | soft | tertiary | ghost | dashed | outline
-   size   -> tiny | small | medium | large
-   ------------------------------------------------------------------------ */
+/* RV Design — Button
+   type -> primary | secondary | text
+   size -> small | medium | large
+   ---------------------------------------------------------------------- */
 
 .rv-btn {
   display: inline-flex;
@@ -27,116 +25,49 @@
 .rv-btn:active { transform: translateY(0.5px) scale(0.985); }
 
 /* ---- sizes ------------------------------------------------------------ */
-.rv-btn--tiny   { height: 1.375rem; padding-inline: var(--rv-space-2); font-size: var(--rv-text-xs); border-radius: var(--rv-radius-sm); }
 .rv-btn--small  { height: 1.75rem;  padding-inline: var(--rv-space-3); font-size: var(--rv-text-sm); }
 .rv-btn--medium { height: 2.125rem; padding-inline: var(--rv-space-4); font-size: var(--rv-text-md); }
 .rv-btn--large  { height: 2.625rem; padding-inline: var(--rv-space-5); font-size: var(--rv-text-base); }
 
-/* ---- variant: solid (Basic) ------------------------------------------ */
-.rv-btn--solid.rv-btn--default { background: var(--rv-color-default); border-color: var(--rv-color-default); color: var(--rv-color-default-fg); }
-.rv-btn--solid.rv-btn--default:hover { background: var(--rv-color-default-hover); border-color: var(--rv-color-default-hover); }
-.rv-btn--solid.rv-btn--primary { background: var(--rv-color-primary); border-color: var(--rv-color-primary); color: #fff; }
-.rv-btn--solid.rv-btn--primary:hover { background: var(--rv-color-primary-hover); border-color: var(--rv-color-primary-hover); }
-.rv-btn--solid.rv-btn--info { background: var(--rv-color-info); border-color: var(--rv-color-info); color: #fff; }
-.rv-btn--solid.rv-btn--info:hover { background: var(--rv-color-info-hover); border-color: var(--rv-color-info-hover); }
-.rv-btn--solid.rv-btn--success { background: var(--rv-color-success); border-color: var(--rv-color-success); color: #fff; }
-.rv-btn--solid.rv-btn--success:hover { background: var(--rv-color-success-hover); border-color: var(--rv-color-success-hover); }
-.rv-btn--solid.rv-btn--warning { background: var(--rv-color-warning); border-color: var(--rv-color-warning); color: #fff; }
-.rv-btn--solid.rv-btn--warning:hover { background: var(--rv-color-warning-hover); border-color: var(--rv-color-warning-hover); }
-.rv-btn--solid.rv-btn--error { background: var(--rv-color-error); border-color: var(--rv-color-error); color: #fff; }
-.rv-btn--solid.rv-btn--error:hover { background: var(--rv-color-error-hover); border-color: var(--rv-color-error-hover); }
+/* ---- types ------------------------------------------------------------ */
+.rv-btn--primary {
+  background: var(--rv-accent);
+  border-color: var(--rv-accent);
+  color: var(--rv-text-on-accent);
+}
+.rv-btn--primary:hover:not(:disabled) {
+  background: var(--rv-accent-hover);
+  border-color: var(--rv-accent-hover);
+}
 
-/* ---- variant: soft (Secondary) --------------------------------------- */
-.rv-btn--soft.rv-btn--default { background: color-mix(in oklab, var(--rv-color-default) 16%, transparent); color: var(--rv-color-default-fg); }
-.rv-btn--soft.rv-btn--default:hover { background: color-mix(in oklab, var(--rv-color-default) 26%, transparent); }
-.rv-btn--soft.rv-btn--primary { background: color-mix(in oklab, var(--rv-color-primary) 16%, transparent); color: var(--rv-color-primary-fg); }
-.rv-btn--soft.rv-btn--primary:hover { background: color-mix(in oklab, var(--rv-color-primary) 26%, transparent); }
-.rv-btn--soft.rv-btn--info { background: color-mix(in oklab, var(--rv-color-info) 16%, transparent); color: var(--rv-color-info-fg); }
-.rv-btn--soft.rv-btn--info:hover { background: color-mix(in oklab, var(--rv-color-info) 26%, transparent); }
-.rv-btn--soft.rv-btn--success { background: color-mix(in oklab, var(--rv-color-success) 16%, transparent); color: var(--rv-color-success-fg); }
-.rv-btn--soft.rv-btn--success:hover { background: color-mix(in oklab, var(--rv-color-success) 26%, transparent); }
-.rv-btn--soft.rv-btn--warning { background: color-mix(in oklab, var(--rv-color-warning) 16%, transparent); color: var(--rv-color-warning-fg); }
-.rv-btn--soft.rv-btn--warning:hover { background: color-mix(in oklab, var(--rv-color-warning) 26%, transparent); }
-.rv-btn--soft.rv-btn--error { background: color-mix(in oklab, var(--rv-color-error) 16%, transparent); color: var(--rv-color-error-fg); }
-.rv-btn--soft.rv-btn--error:hover { background: color-mix(in oklab, var(--rv-color-error) 26%, transparent); }
+.rv-btn--secondary {
+  background: transparent;
+  border-color: var(--rv-border-strong);
+  color: var(--rv-text-primary);
+}
+.rv-btn--secondary:hover:not(:disabled) {
+  background: var(--rv-state-hover);
+}
 
-/* ---- variant: tertiary ----------------------------------------------- */
-.rv-btn--tertiary.rv-btn--default { background: var(--rv-state-hover); color: var(--rv-color-default-fg); }
-.rv-btn--tertiary.rv-btn--default:hover { background: var(--rv-state-active); }
-.rv-btn--tertiary.rv-btn--primary { background: var(--rv-state-hover); color: var(--rv-color-primary-fg); }
-.rv-btn--tertiary.rv-btn--primary:hover { background: var(--rv-state-active); }
-.rv-btn--tertiary.rv-btn--info { background: var(--rv-state-hover); color: var(--rv-color-info-fg); }
-.rv-btn--tertiary.rv-btn--info:hover { background: var(--rv-state-active); }
-.rv-btn--tertiary.rv-btn--success { background: var(--rv-state-hover); color: var(--rv-color-success-fg); }
-.rv-btn--tertiary.rv-btn--success:hover { background: var(--rv-state-active); }
-.rv-btn--tertiary.rv-btn--warning { background: var(--rv-state-hover); color: var(--rv-color-warning-fg); }
-.rv-btn--tertiary.rv-btn--warning:hover { background: var(--rv-state-active); }
-.rv-btn--tertiary.rv-btn--error { background: var(--rv-state-hover); color: var(--rv-color-error-fg); }
-.rv-btn--tertiary.rv-btn--error:hover { background: var(--rv-state-active); }
+.rv-btn--text {
+  background: transparent;
+  border-color: transparent;
+  color: var(--rv-text-primary);
+}
+.rv-btn--text:hover:not(:disabled) {
+  background: var(--rv-state-hover);
+}
 
-/* ---- variant: ghost (Quaternary) ------------------------------------- */
-.rv-btn--ghost.rv-btn--default { background: transparent; color: var(--rv-color-default-fg); }
-.rv-btn--ghost.rv-btn--default:hover { background: color-mix(in oklab, var(--rv-color-default) 12%, transparent); }
-.rv-btn--ghost.rv-btn--primary { background: transparent; color: var(--rv-color-primary-fg); }
-.rv-btn--ghost.rv-btn--primary:hover { background: color-mix(in oklab, var(--rv-color-primary) 12%, transparent); }
-.rv-btn--ghost.rv-btn--info { background: transparent; color: var(--rv-color-info-fg); }
-.rv-btn--ghost.rv-btn--info:hover { background: color-mix(in oklab, var(--rv-color-info) 12%, transparent); }
-.rv-btn--ghost.rv-btn--success { background: transparent; color: var(--rv-color-success-fg); }
-.rv-btn--ghost.rv-btn--success:hover { background: color-mix(in oklab, var(--rv-color-success) 12%, transparent); }
-.rv-btn--ghost.rv-btn--warning { background: transparent; color: var(--rv-color-warning-fg); }
-.rv-btn--ghost.rv-btn--warning:hover { background: color-mix(in oklab, var(--rv-color-warning) 12%, transparent); }
-.rv-btn--ghost.rv-btn--error { background: transparent; color: var(--rv-color-error-fg); }
-.rv-btn--ghost.rv-btn--error:hover { background: color-mix(in oklab, var(--rv-color-error) 12%, transparent); }
-
-/* ---- variant: outline ------------------------------------------------ */
-.rv-btn--outline.rv-btn--default { background: transparent; color: var(--rv-color-default-fg); border-color: var(--rv-border-strong); }
-.rv-btn--outline.rv-btn--default:hover { background: color-mix(in oklab, var(--rv-color-default) 10%, transparent); border-color: var(--rv-border-strong); }
-.rv-btn--outline.rv-btn--primary { background: transparent; color: var(--rv-color-primary-fg); border-color: color-mix(in oklab, var(--rv-color-primary) 55%, transparent); }
-.rv-btn--outline.rv-btn--primary:hover { background: color-mix(in oklab, var(--rv-color-primary) 10%, transparent); border-color: var(--rv-color-primary); }
-.rv-btn--outline.rv-btn--info { background: transparent; color: var(--rv-color-info-fg); border-color: color-mix(in oklab, var(--rv-color-info) 55%, transparent); }
-.rv-btn--outline.rv-btn--info:hover { background: color-mix(in oklab, var(--rv-color-info) 10%, transparent); border-color: var(--rv-color-info); }
-.rv-btn--outline.rv-btn--success { background: transparent; color: var(--rv-color-success-fg); border-color: color-mix(in oklab, var(--rv-color-success) 55%, transparent); }
-.rv-btn--outline.rv-btn--success:hover { background: color-mix(in oklab, var(--rv-color-success) 10%, transparent); border-color: var(--rv-color-success); }
-.rv-btn--outline.rv-btn--warning { background: transparent; color: var(--rv-color-warning-fg); border-color: color-mix(in oklab, var(--rv-color-warning) 55%, transparent); }
-.rv-btn--outline.rv-btn--warning:hover { background: color-mix(in oklab, var(--rv-color-warning) 10%, transparent); border-color: var(--rv-color-warning); }
-.rv-btn--outline.rv-btn--error { background: transparent; color: var(--rv-color-error-fg); border-color: color-mix(in oklab, var(--rv-color-error) 55%, transparent); }
-.rv-btn--outline.rv-btn--error:hover { background: color-mix(in oklab, var(--rv-color-error) 10%, transparent); border-color: var(--rv-color-error); }
-
-/* ---- variant: dashed ------------------------------------------------- */
-.rv-btn--dashed.rv-btn--default { background: transparent; color: var(--rv-color-default-fg); border-style: dashed; border-color: var(--rv-border-strong); }
-.rv-btn--dashed.rv-btn--default:hover { background: color-mix(in oklab, var(--rv-color-default) 8%, transparent); border-color: var(--rv-border-strong); }
-.rv-btn--dashed.rv-btn--primary { background: transparent; color: var(--rv-color-primary-fg); border-style: dashed; border-color: color-mix(in oklab, var(--rv-color-primary) 55%, transparent); }
-.rv-btn--dashed.rv-btn--primary:hover { background: color-mix(in oklab, var(--rv-color-primary) 8%, transparent); border-color: var(--rv-color-primary); }
-.rv-btn--dashed.rv-btn--info { background: transparent; color: var(--rv-color-info-fg); border-style: dashed; border-color: color-mix(in oklab, var(--rv-color-info) 55%, transparent); }
-.rv-btn--dashed.rv-btn--info:hover { background: color-mix(in oklab, var(--rv-color-info) 8%, transparent); border-color: var(--rv-color-info); }
-.rv-btn--dashed.rv-btn--success { background: transparent; color: var(--rv-color-success-fg); border-style: dashed; border-color: color-mix(in oklab, var(--rv-color-success) 55%, transparent); }
-.rv-btn--dashed.rv-btn--success:hover { background: color-mix(in oklab, var(--rv-color-success) 8%, transparent); border-color: var(--rv-color-success); }
-.rv-btn--dashed.rv-btn--warning { background: transparent; color: var(--rv-color-warning-fg); border-style: dashed; border-color: color-mix(in oklab, var(--rv-color-warning) 55%, transparent); }
-.rv-btn--dashed.rv-btn--warning:hover { background: color-mix(in oklab, var(--rv-color-warning) 8%, transparent); border-color: var(--rv-color-warning); }
-.rv-btn--dashed.rv-btn--error { background: transparent; color: var(--rv-color-error-fg); border-style: dashed; border-color: color-mix(in oklab, var(--rv-color-error) 55%, transparent); }
-.rv-btn--dashed.rv-btn--error:hover { background: color-mix(in oklab, var(--rv-color-error) 8%, transparent); border-color: var(--rv-color-error); }
-
-/* ---- modifiers -------------------------------------------------------- */
-.rv-btn--block { display: flex; width: 100%; }
-
+/* ---- icon-only -------------------------------------------------------- */
 .rv-btn--icon { padding-inline: 0; aspect-ratio: 1 / 1; }
-.rv-btn--icon.rv-btn--tiny   { width: 1.375rem; }
 .rv-btn--icon.rv-btn--small  { width: 1.75rem; }
 .rv-btn--icon.rv-btn--medium { width: 2.125rem; }
 .rv-btn--icon.rv-btn--large  { width: 2.625rem; }
-.rv-btn--circle { border-radius: var(--rv-radius-full); }
 
+/* ---- disabled --------------------------------------------------------- */
 .rv-btn[disabled],
 .rv-btn--disabled { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
 
-.rv-btn__spinner {
-  width: 1em; height: 1em;
-  border-radius: var(--rv-radius-full);
-  border: 2px solid currentColor;
-  border-right-color: transparent;
-  animation: rv-spin 0.6s linear infinite;
-}
+/* ---- slots ------------------------------------------------------------ */
 .rv-btn__icon { display: inline-flex; width: 1em; height: 1em; flex: none; }
 .rv-btn__icon svg { width: 100%; height: 100%; display: block; }
-
-@keyframes rv-spin { to { transform: rotate(360deg); } }

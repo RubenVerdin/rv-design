@@ -35,7 +35,7 @@ import 'rv-design/styles.css'
 
 | Component | Description |
 |---|---|
-| `RvButton` | Triggers an action. Supports type, variant, size, loading, and icon slots. |
+| `RvButton` | Triggers an action. Three types: primary, secondary, text. Supports size and icon slots. |
 | `RvInput` | Single-line text input with label, prefix, suffix, and validation state. |
 | `RvTextarea` | Multi-line text input. |
 | `RvSelect` | Dropdown picker for a list of options. |
