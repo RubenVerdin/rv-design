@@ -1,0 +1,1541 @@
+{
+  "version": 1.1,
+  "properties": [
+    {
+      "name": "--rv-neutral-0",
+      "description": "Neutral / stone scale (warm taupe) — #fff"
+    },
+    {
+      "name": "--rv-neutral-50",
+      "description": "ivory  #FAF9F7 — oklch(98.4% 0.0030 82deg)"
+    },
+    {
+      "name": "--rv-neutral-100",
+      "description": "Neutral / stone scale (warm taupe) — oklch(96.8% 0.0040 80deg)"
+    },
+    {
+      "name": "--rv-neutral-150",
+      "description": "Neutral / stone scale (warm taupe) — oklch(94.9% 0.0050 78deg)"
+    },
+    {
+      "name": "--rv-neutral-200",
+      "description": "Neutral / stone scale (warm taupe) — oklch(92.2% 0.0070 76deg)"
+    },
+    {
+      "name": "--rv-neutral-300",
+      "description": "stone  #D5CEC5 — oklch(86.2% 0.0120 75deg)"
+    },
+    {
+      "name": "--rv-neutral-400",
+      "description": "Neutral / stone scale (warm taupe) — oklch(73.2% 0.0140 73deg)"
+    },
+    {
+      "name": "--rv-neutral-500",
+      "description": "Neutral / stone scale (warm taupe) — oklch(58.6% 0.0140 70deg)"
+    },
+    {
+      "name": "--rv-neutral-600",
+      "description": "Neutral / stone scale (warm taupe) — oklch(47.2% 0.0130 68deg)"
+    },
+    {
+      "name": "--rv-neutral-700",
+      "description": "Neutral / stone scale (warm taupe) — oklch(39.2% 0.0120 66deg)"
+    },
+    {
+      "name": "--rv-neutral-800",
+      "description": "Neutral / stone scale (warm taupe) — oklch(29.8% 0.0100 64deg)"
+    },
+    {
+      "name": "--rv-neutral-850",
+      "description": "Neutral / stone scale (warm taupe) — oklch(24.8% 0.0090 62deg)"
+    },
+    {
+      "name": "--rv-neutral-900",
+      "description": "Neutral / stone scale (warm taupe) — oklch(21.2% 0.0080 60deg)"
+    },
+    {
+      "name": "--rv-neutral-925",
+      "description": "charcoal #1A1816 — oklch(19% 0.0070 60deg)"
+    },
+    {
+      "name": "--rv-neutral-950",
+      "description": "Neutral / stone scale (warm taupe) — oklch(16.8% 0.0060 58deg)"
+    },
+    {
+      "name": "--rv-neutral-975",
+      "description": "Neutral / stone scale (warm taupe) — oklch(14.4% 0.0050 58deg)"
+    },
+    {
+      "name": "--rv-primary-50",
+      "description": "Primary (forest green) — oklch(96.2% 0.0140 142deg)"
+    },
+    {
+      "name": "--rv-primary-100",
+      "description": "Primary (forest green) — oklch(93% 0.0250 141deg)"
+    },
+    {
+      "name": "--rv-primary-200",
+      "description": "Primary (forest green) — oklch(87.8% 0.0360 140deg)"
+    },
+    {
+      "name": "--rv-primary-300",
+      "description": "Primary (forest green) — oklch(79.2% 0.0440 139deg)"
+    },
+    {
+      "name": "--rv-primary-400",
+      "description": "Primary (forest green) — oklch(64.8% 0.0500 138deg)"
+    },
+    {
+      "name": "--rv-primary-500",
+      "description": "Primary (forest green) — oklch(54% 0.0500 137deg)"
+    },
+    {
+      "name": "--rv-primary-600",
+      "description": "#4A5C42 — oklch(47% 0.0470 137deg)"
+    },
+    {
+      "name": "--rv-primary-700",
+      "description": "Primary (forest green) — oklch(40.8% 0.0420 138deg)"
+    },
+    {
+      "name": "--rv-primary-800",
+      "description": "Primary (forest green) — oklch(34.8% 0.0360 139deg)"
+    },
+    {
+      "name": "--rv-primary-900",
+      "description": "Primary (forest green) — oklch(29.8% 0.0290 140deg)"
+    },
+    {
+      "name": "--rv-primary-950",
+      "description": "Primary (forest green) — oklch(22.4% 0.0210 141deg)"
+    },
+    {
+      "name": "--rv-walnut-50",
+      "description": "Accent (walnut / caramel) — oklch(96.4% 0.0180 72deg)"
+    },
+    {
+      "name": "--rv-walnut-100",
+      "description": "Accent (walnut / caramel) — oklch(93% 0.0340 70deg)"
+    },
+    {
+      "name": "--rv-walnut-200",
+      "description": "Accent (walnut / caramel) — oklch(87.8% 0.0520 68deg)"
+    },
+    {
+      "name": "--rv-walnut-300",
+      "description": "Accent (walnut / caramel) — oklch(79.8% 0.0700 66deg)"
+    },
+    {
+      "name": "--rv-walnut-400",
+      "description": "Accent (walnut / caramel) — oklch(70.6% 0.0840 64deg)"
+    },
+    {
+      "name": "--rv-walnut-500",
+      "description": "Accent (walnut / caramel) — oklch(64.2% 0.0900 63deg)"
+    },
+    {
+      "name": "--rv-walnut-600",
+      "description": "#A97844 — oklch(59.8% 0.0900 62deg)"
+    },
+    {
+      "name": "--rv-walnut-700",
+      "description": "Accent (walnut / caramel) — oklch(51.8% 0.0780 61deg)"
+    },
+    {
+      "name": "--rv-walnut-800",
+      "description": "Accent (walnut / caramel) — oklch(44.2% 0.0640 61deg)"
+    },
+    {
+      "name": "--rv-walnut-900",
+      "description": "Accent (walnut / caramel) — oklch(38.2% 0.0520 62deg)"
+    },
+    {
+      "name": "--rv-walnut-950",
+      "description": "Accent (walnut / caramel) — oklch(28.% 0.0380 63deg)"
+    },
+    {
+      "name": "--rv-info-50",
+      "description": "Info (muted slate blue) — oklch(97.2% 0.0140 248deg)"
+    },
+    {
+      "name": "--rv-info-100",
+      "description": "Info (muted slate blue) — oklch(93% 0.0400 248deg)"
+    },
+    {
+      "name": "--rv-info-300",
+      "description": "Info (muted slate blue) — oklch(78% 0.0900 250deg)"
+    },
+    {
+      "name": "--rv-info-400",
+      "description": "Info (muted slate blue) — oklch(68% 0.1120 252deg)"
+    },
+    {
+      "name": "--rv-info-500",
+      "description": "Info (muted slate blue) — oklch(60% 0.1180 254deg)"
+    },
+    {
+      "name": "--rv-info-600",
+      "description": "Info (muted slate blue) — oklch(53.2% 0.1180 256deg)"
+    },
+    {
+      "name": "--rv-info-700",
+      "description": "Info (muted slate blue) — oklch(46.2% 0.1040 257deg)"
+    },
+    {
+      "name": "--rv-success-50",
+      "description": "Success (clean green, distinct from forest) — oklch(96.6% 0.0260 152deg)"
+    },
+    {
+      "name": "--rv-success-100",
+      "description": "Success (clean green, distinct from forest) — oklch(92.2% 0.0580 152deg)"
+    },
+    {
+      "name": "--rv-success-400",
+      "description": "Success (clean green, distinct from forest) — oklch(74% 0.1300 150deg)"
+    },
+    {
+      "name": "--rv-success-500",
+      "description": "Success (clean green, distinct from forest) — oklch(66% 0.1360 150deg)"
+    },
+    {
+      "name": "--rv-success-600",
+      "description": "Success (clean green, distinct from forest) — oklch(57.8% 0.1220 150deg)"
+    },
+    {
+      "name": "--rv-success-700",
+      "description": "Success (clean green, distinct from forest) — oklch(49.2% 0.1020 150deg)"
+    },
+    {
+      "name": "--rv-warning-50",
+      "description": "Warning (ochre / amber, in the walnut family) — oklch(97.8% 0.0300 86deg)"
+    },
+    {
+      "name": "--rv-warning-100",
+      "description": "Warning (ochre / amber, in the walnut family) — oklch(94.5% 0.0760 84deg)"
+    },
+    {
+      "name": "--rv-warning-400",
+      "description": "Warning (ochre / amber, in the walnut family) — oklch(81.2% 0.1300 78deg)"
+    },
+    {
+      "name": "--rv-warning-500",
+      "description": "Warning (ochre / amber, in the walnut family) — oklch(76.2% 0.1320 74deg)"
+    },
+    {
+      "name": "--rv-warning-600",
+      "description": "Warning (ochre / amber, in the walnut family) — oklch(68.8% 0.1300 68deg)"
+    },
+    {
+      "name": "--rv-warning-700",
+      "description": "Warning (ochre / amber, in the walnut family) — oklch(55.8% 0.1120 62deg)"
+    },
+    {
+      "name": "--rv-error-50",
+      "description": "Error (terracotta / brick red) — oklch(96.8% 0.0160 28deg)"
+    },
+    {
+      "name": "--rv-error-100",
+      "description": "Error (terracotta / brick red) — oklch(92.4% 0.0440 28deg)"
+    },
+    {
+      "name": "--rv-error-400",
+      "description": "Error (terracotta / brick red) — oklch(65.2% 0.1640 30deg)"
+    },
+    {
+      "name": "--rv-error-500",
+      "description": "Error (terracotta / brick red) — oklch(59.2% 0.1820 31deg)"
+    },
+    {
+      "name": "--rv-error-600",
+      "description": "Error (terracotta / brick red) — oklch(53.6% 0.1840 32deg)"
+    },
+    {
+      "name": "--rv-error-700",
+      "description": "Error (terracotta / brick red) — oklch(47% 0.1620 32deg)"
+    },
+    {
+      "name": "--rv-surface-page",
+      "description": "ivory — var(--rv-neutral-50)"
+    },
+    {
+      "name": "--rv-surface-card",
+      "description": "white cards on ivory — var(--rv-neutral-0)"
+    },
+    {
+      "name": "--rv-surface-raised",
+      "description": "Surfaces — var(--rv-neutral-0)"
+    },
+    {
+      "name": "--rv-surface-sunken",
+      "description": "Surfaces — var(--rv-neutral-100)"
+    },
+    {
+      "name": "--rv-surface-inset",
+      "description": "Surfaces — var(--rv-neutral-150)"
+    },
+    {
+      "name": "--rv-surface-overlay",
+      "description": "Surfaces — color-mix(in oklab, var(--rv-neutral-950) 42%, …"
+    },
+    {
+      "name": "--rv-surface-inverse",
+      "description": "Surfaces — var(--rv-neutral-900)"
+    },
+    {
+      "name": "--rv-text-primary",
+      "description": "charcoal — var(--rv-neutral-925)"
+    },
+    {
+      "name": "--rv-text-secondary",
+      "description": "Text — var(--rv-neutral-700)"
+    },
+    {
+      "name": "--rv-text-muted",
+      "description": "Text — var(--rv-neutral-500)"
+    },
+    {
+      "name": "--rv-text-disabled",
+      "description": "Text — var(--rv-neutral-400)"
+    },
+    {
+      "name": "--rv-text-inverse",
+      "description": "Text — var(--rv-neutral-50)"
+    },
+    {
+      "name": "--rv-text-link",
+      "description": "Text — var(--rv-primary-700)"
+    },
+    {
+      "name": "--rv-text-on-accent",
+      "description": "Text — var(--rv-neutral-50)"
+    },
+    {
+      "name": "--rv-border-subtle",
+      "description": "Borders — var(--rv-neutral-150)"
+    },
+    {
+      "name": "--rv-border-default",
+      "description": "Borders — var(--rv-neutral-200)"
+    },
+    {
+      "name": "--rv-border-strong",
+      "description": "stone — var(--rv-neutral-300)"
+    },
+    {
+      "name": "--rv-border-inverse",
+      "description": "Borders — var(--rv-neutral-700)"
+    },
+    {
+      "name": "--rv-accent",
+      "description": "Accent / brand (forest green) — var(--rv-primary-600)"
+    },
+    {
+      "name": "--rv-accent-hover",
+      "description": "Accent / brand (forest green) — var(--rv-primary-700)"
+    },
+    {
+      "name": "--rv-accent-active",
+      "description": "Accent / brand (forest green) — var(--rv-primary-800)"
+    },
+    {
+      "name": "--rv-accent-subtle",
+      "description": "Accent / brand (forest green) — var(--rv-primary-50)"
+    },
+    {
+      "name": "--rv-accent-text",
+      "description": "Accent / brand (forest green) — var(--rv-primary-700)"
+    },
+    {
+      "name": "--rv-accent-warm",
+      "description": "Warm accent (walnut) — secondary brand expression — var(--rv-walnut-600)"
+    },
+    {
+      "name": "--rv-accent-warm-hover",
+      "description": "Warm accent (walnut) — secondary brand expression — var(--rv-walnut-700)"
+    },
+    {
+      "name": "--rv-accent-warm-active",
+      "description": "Warm accent (walnut) — secondary brand expression — var(--rv-walnut-800)"
+    },
+    {
+      "name": "--rv-accent-warm-subtle",
+      "description": "Warm accent (walnut) — secondary brand expression — var(--rv-walnut-50)"
+    },
+    {
+      "name": "--rv-accent-warm-text",
+      "description": "Warm accent (walnut) — secondary brand expression — var(--rv-walnut-700)"
+    },
+    {
+      "name": "--rv-focus-ring",
+      "description": "Focus ring — color-mix(in oklab, var(--rv-primary-500) 50%, …"
+    },
+    {
+      "name": "--rv-state-hover",
+      "description": "Neutral interactive state fills — color-mix(in oklab, var(--rv-neutral-925) 6%, t…"
+    },
+    {
+      "name": "--rv-state-active",
+      "description": "Neutral interactive state fills — color-mix(in oklab, var(--rv-neutral-925) 11%, …"
+    },
+    {
+      "name": "--rv-state-selected",
+      "description": "Neutral interactive state fills — var(--rv-primary-50)"
+    },
+    {
+      "name": "--rv-color-default",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-neutral-200)"
+    },
+    {
+      "name": "--rv-color-default-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-neutral-300)"
+    },
+    {
+      "name": "--rv-color-default-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-neutral-800)"
+    },
+    {
+      "name": "--rv-color-primary",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-primary-600)"
+    },
+    {
+      "name": "--rv-color-primary-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-primary-700)"
+    },
+    {
+      "name": "--rv-color-primary-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-primary-700)"
+    },
+    {
+      "name": "--rv-color-info",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-info-600)"
+    },
+    {
+      "name": "--rv-color-info-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-info-700)"
+    },
+    {
+      "name": "--rv-color-info-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-info-700)"
+    },
+    {
+      "name": "--rv-color-success",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-success-600)"
+    },
+    {
+      "name": "--rv-color-success-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-success-700)"
+    },
+    {
+      "name": "--rv-color-success-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-success-700)"
+    },
+    {
+      "name": "--rv-color-warning",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-warning-500)"
+    },
+    {
+      "name": "--rv-color-warning-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-warning-600)"
+    },
+    {
+      "name": "--rv-color-warning-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-warning-700)"
+    },
+    {
+      "name": "--rv-color-error",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-error-600)"
+    },
+    {
+      "name": "--rv-color-error-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-error-700)"
+    },
+    {
+      "name": "--rv-color-error-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-error-700)"
+    },
+    {
+      "name": "--rv-success-bg",
+      "description": "Soft / message backgrounds — var(--rv-success-50)"
+    },
+    {
+      "name": "--rv-warning-bg",
+      "description": "Soft / message backgrounds — var(--rv-warning-50)"
+    },
+    {
+      "name": "--rv-danger-bg",
+      "description": "Soft / message backgrounds — var(--rv-error-50)"
+    },
+    {
+      "name": "--rv-info-bg",
+      "description": "Soft / message backgrounds — var(--rv-info-50)"
+    },
+    {
+      "name": "--rv-success-text",
+      "description": "Convenience aliases — var(--rv-color-success-fg)"
+    },
+    {
+      "name": "--rv-warning-text",
+      "description": "Convenience aliases — var(--rv-color-warning-fg)"
+    },
+    {
+      "name": "--rv-danger-text",
+      "description": "Convenience aliases — var(--rv-color-error-fg)"
+    },
+    {
+      "name": "--rv-danger",
+      "description": "Convenience aliases — var(--rv-color-error)"
+    },
+    {
+      "name": "--rv-danger-hover",
+      "description": "Convenience aliases — var(--rv-color-error-hover)"
+    },
+    {
+      "name": "--rv-info-text",
+      "description": "Convenience aliases — var(--rv-color-info-fg)"
+    },
+    {
+      "name": "--rv-surface-page",
+      "description": "Surfaces — warm near-black charcoal — var(--rv-neutral-975)"
+    },
+    {
+      "name": "--rv-surface-card",
+      "description": "#1A1816 — var(--rv-neutral-925)"
+    },
+    {
+      "name": "--rv-surface-raised",
+      "description": "Surfaces — warm near-black charcoal — var(--rv-neutral-900)"
+    },
+    {
+      "name": "--rv-surface-sunken",
+      "description": "Surfaces — warm near-black charcoal — var(--rv-neutral-950)"
+    },
+    {
+      "name": "--rv-surface-inset",
+      "description": "Surfaces — warm near-black charcoal — var(--rv-neutral-850)"
+    },
+    {
+      "name": "--rv-surface-overlay",
+      "description": "Surfaces — warm near-black charcoal — color-mix(in oklab, #000 64%, transparent)"
+    },
+    {
+      "name": "--rv-surface-inverse",
+      "description": "Surfaces — warm near-black charcoal — var(--rv-neutral-100)"
+    },
+    {
+      "name": "--rv-text-primary",
+      "description": "Text — warm ivory — oklch(96.2% 0.0040 82deg)"
+    },
+    {
+      "name": "--rv-text-secondary",
+      "description": "Text — warm ivory — oklch(77.6% 0.0070 76deg)"
+    },
+    {
+      "name": "--rv-text-muted",
+      "description": "Text — warm ivory — oklch(61% 0.0090 72deg)"
+    },
+    {
+      "name": "--rv-text-disabled",
+      "description": "Text — warm ivory — oklch(45.2% 0.0090 68deg)"
+    },
+    {
+      "name": "--rv-text-inverse",
+      "description": "Text — warm ivory — var(--rv-neutral-925)"
+    },
+    {
+      "name": "--rv-text-link",
+      "description": "Text — warm ivory — var(--rv-primary-400)"
+    },
+    {
+      "name": "--rv-text-on-accent",
+      "description": "Text — warm ivory — var(--rv-neutral-975)"
+    },
+    {
+      "name": "--rv-border-subtle",
+      "description": "Borders — warm translucent ivory — color-mix(in oklab, var(--rv-neutral-50) 8%, tr…"
+    },
+    {
+      "name": "--rv-border-default",
+      "description": "Borders — warm translucent ivory — color-mix(in oklab, var(--rv-neutral-50) 12%, t…"
+    },
+    {
+      "name": "--rv-border-strong",
+      "description": "Borders — warm translucent ivory — color-mix(in oklab, var(--rv-neutral-50) 20%, t…"
+    },
+    {
+      "name": "--rv-border-inverse",
+      "description": "Borders — warm translucent ivory — var(--rv-neutral-300)"
+    },
+    {
+      "name": "--rv-accent",
+      "description": "Accent — forest green brightens on charcoal — var(--rv-primary-400)"
+    },
+    {
+      "name": "--rv-accent-hover",
+      "description": "Accent — forest green brightens on charcoal — var(--rv-primary-300)"
+    },
+    {
+      "name": "--rv-accent-active",
+      "description": "Accent — forest green brightens on charcoal — var(--rv-primary-200)"
+    },
+    {
+      "name": "--rv-accent-subtle",
+      "description": "Accent — forest green brightens on charcoal — color-mix(in oklab, var(--rv-primary-400) 20%, …"
+    },
+    {
+      "name": "--rv-accent-text",
+      "description": "Accent — forest green brightens on charcoal — var(--rv-primary-300)"
+    },
+    {
+      "name": "--rv-accent-warm",
+      "description": "Warm accent — walnut brightens — var(--rv-walnut-400)"
+    },
+    {
+      "name": "--rv-accent-warm-hover",
+      "description": "Warm accent — walnut brightens — var(--rv-walnut-300)"
+    },
+    {
+      "name": "--rv-accent-warm-active",
+      "description": "Warm accent — walnut brightens — var(--rv-walnut-200)"
+    },
+    {
+      "name": "--rv-accent-warm-subtle",
+      "description": "Warm accent — walnut brightens — color-mix(in oklab, var(--rv-walnut-400) 22%, t…"
+    },
+    {
+      "name": "--rv-accent-warm-text",
+      "description": "Warm accent — walnut brightens — var(--rv-walnut-300)"
+    },
+    {
+      "name": "--rv-focus-ring",
+      "description": "Warm accent — walnut brightens — color-mix(in oklab, var(--rv-primary-400) 55%, …"
+    },
+    {
+      "name": "--rv-state-hover",
+      "description": "Warm accent — walnut brightens — color-mix(in oklab, var(--rv-neutral-50) 8%, tr…"
+    },
+    {
+      "name": "--rv-state-active",
+      "description": "Warm accent — walnut brightens — color-mix(in oklab, var(--rv-neutral-50) 14%, t…"
+    },
+    {
+      "name": "--rv-state-selected",
+      "description": "Warm accent — walnut brightens — color-mix(in oklab, var(--rv-primary-400) 22%, …"
+    },
+    {
+      "name": "--rv-color-default",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — color-mix(in oklab, var(--rv-neutral-50) 14%, t…"
+    },
+    {
+      "name": "--rv-color-default-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — color-mix(in oklab, var(--rv-neutral-50) 20%, t…"
+    },
+    {
+      "name": "--rv-color-default-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — oklch(90.2% 0.0050 80deg)"
+    },
+    {
+      "name": "--rv-color-primary",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-primary-500)"
+    },
+    {
+      "name": "--rv-color-primary-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-primary-400)"
+    },
+    {
+      "name": "--rv-color-primary-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-primary-300)"
+    },
+    {
+      "name": "--rv-color-info",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-info-500)"
+    },
+    {
+      "name": "--rv-color-info-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-info-400)"
+    },
+    {
+      "name": "--rv-color-info-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-info-400)"
+    },
+    {
+      "name": "--rv-color-success",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-success-500)"
+    },
+    {
+      "name": "--rv-color-success-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-success-400)"
+    },
+    {
+      "name": "--rv-color-success-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-success-400)"
+    },
+    {
+      "name": "--rv-color-warning",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-warning-500)"
+    },
+    {
+      "name": "--rv-color-warning-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-warning-400)"
+    },
+    {
+      "name": "--rv-color-warning-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-warning-400)"
+    },
+    {
+      "name": "--rv-color-error",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-error-500)"
+    },
+    {
+      "name": "--rv-color-error-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-error-400)"
+    },
+    {
+      "name": "--rv-color-error-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-error-400)"
+    },
+    {
+      "name": "--rv-success-bg",
+      "description": "Soft backgrounds — tint the hue into the card surface — color-mix(in oklab, var(--rv-success-500) 16%, …"
+    },
+    {
+      "name": "--rv-warning-bg",
+      "description": "Soft backgrounds — tint the hue into the card surface — color-mix(in oklab, var(--rv-warning-500) 16%, …"
+    },
+    {
+      "name": "--rv-danger-bg",
+      "description": "Soft backgrounds — tint the hue into the card surface — color-mix(in oklab, var(--rv-error-500) 16%, va…"
+    },
+    {
+      "name": "--rv-info-bg",
+      "description": "Soft backgrounds — tint the hue into the card surface — color-mix(in oklab, var(--rv-info-500) 16%, var…"
+    },
+    {
+      "name": "--rv-surface-page",
+      "description": "Surfaces — warm near-black charcoal — var(--rv-neutral-975)"
+    },
+    {
+      "name": "--rv-surface-card",
+      "description": "#1A1816 — var(--rv-neutral-925)"
+    },
+    {
+      "name": "--rv-surface-raised",
+      "description": "Surfaces — warm near-black charcoal — var(--rv-neutral-900)"
+    },
+    {
+      "name": "--rv-surface-sunken",
+      "description": "Surfaces — warm near-black charcoal — var(--rv-neutral-950)"
+    },
+    {
+      "name": "--rv-surface-inset",
+      "description": "Surfaces — warm near-black charcoal — var(--rv-neutral-850)"
+    },
+    {
+      "name": "--rv-surface-overlay",
+      "description": "Surfaces — warm near-black charcoal — color-mix(in oklab, #000 64%, transparent)"
+    },
+    {
+      "name": "--rv-surface-inverse",
+      "description": "Surfaces — warm near-black charcoal — var(--rv-neutral-100)"
+    },
+    {
+      "name": "--rv-text-primary",
+      "description": "Text — warm ivory — oklch(96.2% 0.0040 82deg)"
+    },
+    {
+      "name": "--rv-text-secondary",
+      "description": "Text — warm ivory — oklch(77.6% 0.0070 76deg)"
+    },
+    {
+      "name": "--rv-text-muted",
+      "description": "Text — warm ivory — oklch(61% 0.0090 72deg)"
+    },
+    {
+      "name": "--rv-text-disabled",
+      "description": "Text — warm ivory — oklch(45.2% 0.0090 68deg)"
+    },
+    {
+      "name": "--rv-text-inverse",
+      "description": "Text — warm ivory — var(--rv-neutral-925)"
+    },
+    {
+      "name": "--rv-text-link",
+      "description": "Text — warm ivory — var(--rv-primary-400)"
+    },
+    {
+      "name": "--rv-text-on-accent",
+      "description": "Text — warm ivory — var(--rv-neutral-975)"
+    },
+    {
+      "name": "--rv-border-subtle",
+      "description": "Borders — warm translucent ivory — color-mix(in oklab, var(--rv-neutral-50) 8%, tr…"
+    },
+    {
+      "name": "--rv-border-default",
+      "description": "Borders — warm translucent ivory — color-mix(in oklab, var(--rv-neutral-50) 12%, t…"
+    },
+    {
+      "name": "--rv-border-strong",
+      "description": "Borders — warm translucent ivory — color-mix(in oklab, var(--rv-neutral-50) 20%, t…"
+    },
+    {
+      "name": "--rv-border-inverse",
+      "description": "Borders — warm translucent ivory — var(--rv-neutral-300)"
+    },
+    {
+      "name": "--rv-accent",
+      "description": "Accent — forest green brightens on charcoal — var(--rv-primary-400)"
+    },
+    {
+      "name": "--rv-accent-hover",
+      "description": "Accent — forest green brightens on charcoal — var(--rv-primary-300)"
+    },
+    {
+      "name": "--rv-accent-active",
+      "description": "Accent — forest green brightens on charcoal — var(--rv-primary-200)"
+    },
+    {
+      "name": "--rv-accent-subtle",
+      "description": "Accent — forest green brightens on charcoal — color-mix(in oklab, var(--rv-primary-400) 20%, …"
+    },
+    {
+      "name": "--rv-accent-text",
+      "description": "Accent — forest green brightens on charcoal — var(--rv-primary-300)"
+    },
+    {
+      "name": "--rv-accent-warm",
+      "description": "Warm accent — walnut brightens — var(--rv-walnut-400)"
+    },
+    {
+      "name": "--rv-accent-warm-hover",
+      "description": "Warm accent — walnut brightens — var(--rv-walnut-300)"
+    },
+    {
+      "name": "--rv-accent-warm-active",
+      "description": "Warm accent — walnut brightens — var(--rv-walnut-200)"
+    },
+    {
+      "name": "--rv-accent-warm-subtle",
+      "description": "Warm accent — walnut brightens — color-mix(in oklab, var(--rv-walnut-400) 22%, t…"
+    },
+    {
+      "name": "--rv-accent-warm-text",
+      "description": "Warm accent — walnut brightens — var(--rv-walnut-300)"
+    },
+    {
+      "name": "--rv-focus-ring",
+      "description": "Warm accent — walnut brightens — color-mix(in oklab, var(--rv-primary-400) 55%, …"
+    },
+    {
+      "name": "--rv-state-hover",
+      "description": "Warm accent — walnut brightens — color-mix(in oklab, var(--rv-neutral-50) 8%, tr…"
+    },
+    {
+      "name": "--rv-state-active",
+      "description": "Warm accent — walnut brightens — color-mix(in oklab, var(--rv-neutral-50) 14%, t…"
+    },
+    {
+      "name": "--rv-state-selected",
+      "description": "Warm accent — walnut brightens — color-mix(in oklab, var(--rv-primary-400) 22%, …"
+    },
+    {
+      "name": "--rv-color-default",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — color-mix(in oklab, var(--rv-neutral-50) 14%, t…"
+    },
+    {
+      "name": "--rv-color-default-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — color-mix(in oklab, var(--rv-neutral-50) 20%, t…"
+    },
+    {
+      "name": "--rv-color-default-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — oklch(90.2% 0.0050 80deg)"
+    },
+    {
+      "name": "--rv-color-primary",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-primary-500)"
+    },
+    {
+      "name": "--rv-color-primary-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-primary-400)"
+    },
+    {
+      "name": "--rv-color-primary-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-primary-300)"
+    },
+    {
+      "name": "--rv-color-info",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-info-500)"
+    },
+    {
+      "name": "--rv-color-info-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-info-400)"
+    },
+    {
+      "name": "--rv-color-info-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-info-400)"
+    },
+    {
+      "name": "--rv-color-success",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-success-500)"
+    },
+    {
+      "name": "--rv-color-success-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-success-400)"
+    },
+    {
+      "name": "--rv-color-success-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-success-400)"
+    },
+    {
+      "name": "--rv-color-warning",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-warning-500)"
+    },
+    {
+      "name": "--rv-color-warning-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-warning-400)"
+    },
+    {
+      "name": "--rv-color-warning-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-warning-400)"
+    },
+    {
+      "name": "--rv-color-error",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-error-500)"
+    },
+    {
+      "name": "--rv-color-error-hover",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-error-400)"
+    },
+    {
+      "name": "--rv-color-error-fg",
+      "description": "Per-type — solid fills stay saturated; text colors brighten — var(--rv-error-400)"
+    },
+    {
+      "name": "--rv-success-bg",
+      "description": "Soft backgrounds — tint the hue into the card surface — color-mix(in oklab, var(--rv-success-500) 16%, …"
+    },
+    {
+      "name": "--rv-warning-bg",
+      "description": "Soft backgrounds — tint the hue into the card surface — color-mix(in oklab, var(--rv-warning-500) 16%, …"
+    },
+    {
+      "name": "--rv-danger-bg",
+      "description": "Soft backgrounds — tint the hue into the card surface — color-mix(in oklab, var(--rv-error-500) 16%, va…"
+    },
+    {
+      "name": "--rv-info-bg",
+      "description": "Soft backgrounds — tint the hue into the card surface — color-mix(in oklab, var(--rv-info-500) 16%, var…"
+    },
+    {
+      "name": "--rv-surface-page",
+      "description": "ivory — var(--rv-neutral-50)"
+    },
+    {
+      "name": "--rv-surface-card",
+      "description": "white cards on ivory — var(--rv-neutral-0)"
+    },
+    {
+      "name": "--rv-surface-raised",
+      "description": "Surfaces — var(--rv-neutral-0)"
+    },
+    {
+      "name": "--rv-surface-sunken",
+      "description": "Surfaces — var(--rv-neutral-100)"
+    },
+    {
+      "name": "--rv-surface-inset",
+      "description": "Surfaces — var(--rv-neutral-150)"
+    },
+    {
+      "name": "--rv-surface-overlay",
+      "description": "Surfaces — color-mix(in oklab, var(--rv-neutral-950) 42%, …"
+    },
+    {
+      "name": "--rv-surface-inverse",
+      "description": "Surfaces — var(--rv-neutral-900)"
+    },
+    {
+      "name": "--rv-text-primary",
+      "description": "charcoal — var(--rv-neutral-925)"
+    },
+    {
+      "name": "--rv-text-secondary",
+      "description": "Text — var(--rv-neutral-700)"
+    },
+    {
+      "name": "--rv-text-muted",
+      "description": "Text — var(--rv-neutral-500)"
+    },
+    {
+      "name": "--rv-text-disabled",
+      "description": "Text — var(--rv-neutral-400)"
+    },
+    {
+      "name": "--rv-text-inverse",
+      "description": "Text — var(--rv-neutral-50)"
+    },
+    {
+      "name": "--rv-text-link",
+      "description": "Text — var(--rv-primary-700)"
+    },
+    {
+      "name": "--rv-text-on-accent",
+      "description": "Text — var(--rv-neutral-50)"
+    },
+    {
+      "name": "--rv-border-subtle",
+      "description": "Borders — var(--rv-neutral-150)"
+    },
+    {
+      "name": "--rv-border-default",
+      "description": "Borders — var(--rv-neutral-200)"
+    },
+    {
+      "name": "--rv-border-strong",
+      "description": "stone — var(--rv-neutral-300)"
+    },
+    {
+      "name": "--rv-border-inverse",
+      "description": "Borders — var(--rv-neutral-700)"
+    },
+    {
+      "name": "--rv-accent",
+      "description": "Accent / brand (forest green) — var(--rv-primary-600)"
+    },
+    {
+      "name": "--rv-accent-hover",
+      "description": "Accent / brand (forest green) — var(--rv-primary-700)"
+    },
+    {
+      "name": "--rv-accent-active",
+      "description": "Accent / brand (forest green) — var(--rv-primary-800)"
+    },
+    {
+      "name": "--rv-accent-subtle",
+      "description": "Accent / brand (forest green) — var(--rv-primary-50)"
+    },
+    {
+      "name": "--rv-accent-text",
+      "description": "Accent / brand (forest green) — var(--rv-primary-700)"
+    },
+    {
+      "name": "--rv-accent-warm",
+      "description": "Warm accent (walnut) — secondary brand expression — var(--rv-walnut-600)"
+    },
+    {
+      "name": "--rv-accent-warm-hover",
+      "description": "Warm accent (walnut) — secondary brand expression — var(--rv-walnut-700)"
+    },
+    {
+      "name": "--rv-accent-warm-active",
+      "description": "Warm accent (walnut) — secondary brand expression — var(--rv-walnut-800)"
+    },
+    {
+      "name": "--rv-accent-warm-subtle",
+      "description": "Warm accent (walnut) — secondary brand expression — var(--rv-walnut-50)"
+    },
+    {
+      "name": "--rv-accent-warm-text",
+      "description": "Warm accent (walnut) — secondary brand expression — var(--rv-walnut-700)"
+    },
+    {
+      "name": "--rv-focus-ring",
+      "description": "Focus ring — color-mix(in oklab, var(--rv-primary-500) 50%, …"
+    },
+    {
+      "name": "--rv-state-hover",
+      "description": "Neutral interactive state fills — color-mix(in oklab, var(--rv-neutral-925) 6%, t…"
+    },
+    {
+      "name": "--rv-state-active",
+      "description": "Neutral interactive state fills — color-mix(in oklab, var(--rv-neutral-925) 11%, …"
+    },
+    {
+      "name": "--rv-state-selected",
+      "description": "Neutral interactive state fills — var(--rv-primary-50)"
+    },
+    {
+      "name": "--rv-color-default",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-neutral-200)"
+    },
+    {
+      "name": "--rv-color-default-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-neutral-300)"
+    },
+    {
+      "name": "--rv-color-default-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-neutral-800)"
+    },
+    {
+      "name": "--rv-color-primary",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-primary-600)"
+    },
+    {
+      "name": "--rv-color-primary-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-primary-700)"
+    },
+    {
+      "name": "--rv-color-primary-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-primary-700)"
+    },
+    {
+      "name": "--rv-color-info",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-info-600)"
+    },
+    {
+      "name": "--rv-color-info-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-info-700)"
+    },
+    {
+      "name": "--rv-color-info-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-info-700)"
+    },
+    {
+      "name": "--rv-color-success",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-success-600)"
+    },
+    {
+      "name": "--rv-color-success-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-success-700)"
+    },
+    {
+      "name": "--rv-color-success-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-success-700)"
+    },
+    {
+      "name": "--rv-color-warning",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-warning-500)"
+    },
+    {
+      "name": "--rv-color-warning-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-warning-600)"
+    },
+    {
+      "name": "--rv-color-warning-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-warning-700)"
+    },
+    {
+      "name": "--rv-color-error",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-error-600)"
+    },
+    {
+      "name": "--rv-color-error-hover",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-error-700)"
+    },
+    {
+      "name": "--rv-color-error-fg",
+      "description": "Per-type color → (solid fill, hover fill, text/fg color) — var(--rv-error-700)"
+    },
+    {
+      "name": "--rv-success-bg",
+      "description": "Soft / message backgrounds — var(--rv-success-50)"
+    },
+    {
+      "name": "--rv-warning-bg",
+      "description": "Soft / message backgrounds — var(--rv-warning-50)"
+    },
+    {
+      "name": "--rv-danger-bg",
+      "description": "Soft / message backgrounds — var(--rv-error-50)"
+    },
+    {
+      "name": "--rv-info-bg",
+      "description": "Soft / message backgrounds — var(--rv-info-50)"
+    },
+    {
+      "name": "--rv-success-text",
+      "description": "Convenience aliases — var(--rv-color-success-fg)"
+    },
+    {
+      "name": "--rv-warning-text",
+      "description": "Convenience aliases — var(--rv-color-warning-fg)"
+    },
+    {
+      "name": "--rv-danger-text",
+      "description": "Convenience aliases — var(--rv-color-error-fg)"
+    },
+    {
+      "name": "--rv-danger",
+      "description": "Convenience aliases — var(--rv-color-error)"
+    },
+    {
+      "name": "--rv-danger-hover",
+      "description": "Convenience aliases — var(--rv-color-error-hover)"
+    },
+    {
+      "name": "--rv-info-text",
+      "description": "Convenience aliases — var(--rv-color-info-fg)"
+    },
+    {
+      "name": "--rv-shadow-color",
+      "description": "neutral-900-ish, h s l for alpha mixing — 264 13% 16%"
+    },
+    {
+      "name": "--rv-shadow-xs",
+      "description": "0 1px 1px hsl(var(--rv-shadow-color) / 5%)"
+    },
+    {
+      "name": "--rv-shadow-sm",
+      "description": "0 1px 2px hsl(var(--rv-shadow-color) / 6%), 0 1…"
+    },
+    {
+      "name": "--rv-shadow-md",
+      "description": "0 2px 4px hsl(var(--rv-shadow-color) / 6%), 0 4…"
+    },
+    {
+      "name": "--rv-shadow-lg",
+      "description": "0 4px 8px hsl(var(--rv-shadow-color) / 6%), 0 1…"
+    },
+    {
+      "name": "--rv-shadow-xl",
+      "description": "0 8px 16px hsl(var(--rv-shadow-color) / 8%), 0 …"
+    },
+    {
+      "name": "--rv-shadow-inset",
+      "description": "Inner shadow for sunken / pressed inputs — inset 0 1px 2px hsl(var(--rv-shadow-color) / 8%)"
+    },
+    {
+      "name": "--rv-ring-width",
+      "description": "Focus ring composition (used as box-shadow) — 3px"
+    },
+    {
+      "name": "--rv-ring",
+      "description": "Focus ring composition (used as box-shadow) — 0 0 0 var(--rv-ring-width) var(--rv-focus-ring)"
+    },
+    {
+      "name": "--rv-border-width",
+      "description": "Border widths — 1px"
+    },
+    {
+      "name": "--rv-border-width-strong",
+      "description": "Border widths — 1.5px"
+    },
+    {
+      "name": "--rv-duration-instant",
+      "description": "@kind other — 80ms"
+    },
+    {
+      "name": "--rv-duration-fast",
+      "description": "@kind other — 140ms"
+    },
+    {
+      "name": "--rv-duration-normal",
+      "description": "@kind other — 220ms"
+    },
+    {
+      "name": "--rv-duration-slow",
+      "description": "@kind other — 320ms"
+    },
+    {
+      "name": "--rv-ease-standard",
+      "description": "@kind other — cubic-bezier(0.2, 0, 0.1, 1)"
+    },
+    {
+      "name": "--rv-ease-out",
+      "description": "@kind other — cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    {
+      "name": "--rv-ease-in-out",
+      "description": "@kind other — cubic-bezier(0.65, 0, 0.35, 1)"
+    },
+    {
+      "name": "--rv-transition-control",
+      "description": "Common composite — state changes on interactive controls — background-color var(--rv-duration-fast) var(--…"
+    },
+    {
+      "name": "--rv-radius-none",
+      "description": "Raw scale — 0"
+    },
+    {
+      "name": "--rv-radius-xs",
+      "description": "3 — 0.1875rem"
+    },
+    {
+      "name": "--rv-radius-sm",
+      "description": "5 — 0.3125rem"
+    },
+    {
+      "name": "--rv-radius-md",
+      "description": "7 — 0.4375rem"
+    },
+    {
+      "name": "--rv-radius-lg",
+      "description": "10 — 0.625rem"
+    },
+    {
+      "name": "--rv-radius-xl",
+      "description": "14 — 0.875rem"
+    },
+    {
+      "name": "--rv-radius-2xl",
+      "description": "20 — 1.25rem"
+    },
+    {
+      "name": "--rv-radius-full",
+      "description": "pills / avatars — 999px"
+    },
+    {
+      "name": "--rv-radius-control",
+      "description": "buttons, inputs, selects, alerts, tab segments — var(--rv-radius-md)"
+    },
+    {
+      "name": "--rv-radius-card",
+      "description": "cards, panels, menus, dropdown, accordion — var(--rv-radius-lg)"
+    },
+    {
+      "name": "--rv-radius-badge",
+      "description": "badges, tags, tooltip, menu items, focus rings — var(--rv-radius-sm)"
+    },
+    {
+      "name": "--rv-space-0",
+      "description": "Spacing scale (4px base) — 0"
+    },
+    {
+      "name": "--rv-space-1",
+      "description": "4 — 0.25rem"
+    },
+    {
+      "name": "--rv-space-2",
+      "description": "8 — 0.5rem"
+    },
+    {
+      "name": "--rv-space-3",
+      "description": "12 — 0.75rem"
+    },
+    {
+      "name": "--rv-space-4",
+      "description": "16 — 1rem"
+    },
+    {
+      "name": "--rv-space-5",
+      "description": "20 — 1.25rem"
+    },
+    {
+      "name": "--rv-space-6",
+      "description": "24 — 1.5rem"
+    },
+    {
+      "name": "--rv-space-8",
+      "description": "32 — 2rem"
+    },
+    {
+      "name": "--rv-space-10",
+      "description": "40 — 2.5rem"
+    },
+    {
+      "name": "--rv-space-12",
+      "description": "48 — 3rem"
+    },
+    {
+      "name": "--rv-space-16",
+      "description": "64 — 4rem"
+    },
+    {
+      "name": "--rv-space-20",
+      "description": "80 — 5rem"
+    },
+    {
+      "name": "--rv-control-h-sm",
+      "description": "28 — 1.75rem"
+    },
+    {
+      "name": "--rv-control-h-md",
+      "description": "36 — default — 2.25rem"
+    },
+    {
+      "name": "--rv-control-h-lg",
+      "description": "44 — 2.75rem"
+    },
+    {
+      "name": "--rv-control-px-sm",
+      "description": "10 — 0.625rem"
+    },
+    {
+      "name": "--rv-control-px-md",
+      "description": "14 — 0.875rem"
+    },
+    {
+      "name": "--rv-control-px-lg",
+      "description": "18 — 1.125rem"
+    },
+    {
+      "name": "--rv-control-text-sm",
+      "description": "Control font sizes — var(--rv-text-sm)"
+    },
+    {
+      "name": "--rv-control-text-md",
+      "description": "Control font sizes — var(--rv-text-md)"
+    },
+    {
+      "name": "--rv-control-text-lg",
+      "description": "Control font sizes — var(--rv-text-base)"
+    },
+    {
+      "name": "--rv-icon-sm",
+      "description": "14 — 0.875rem"
+    },
+    {
+      "name": "--rv-icon-md",
+      "description": "16 — 1rem"
+    },
+    {
+      "name": "--rv-icon-lg",
+      "description": "20 — 1.25rem"
+    },
+    {
+      "name": "--rv-container-sm",
+      "description": "Layout — 40rem"
+    },
+    {
+      "name": "--rv-container-md",
+      "description": "Layout — 56rem"
+    },
+    {
+      "name": "--rv-container-lg",
+      "description": "Layout — 72rem"
+    },
+    {
+      "name": "--rv-gutter",
+      "description": "Layout — var(--rv-space-6)"
+    },
+    {
+      "name": "--rv-font-sans",
+      "description": "Families — \"Hanken Grotesk\", ui-sans-serif, system-ui, -ap…"
+    },
+    {
+      "name": "--rv-font-mono",
+      "description": "Families — \"JetBrains Mono\", ui-monospace, \"SF Mono\", \"Cas…"
+    },
+    {
+      "name": "--rv-weight-regular",
+      "description": "Weights — 400"
+    },
+    {
+      "name": "--rv-weight-medium",
+      "description": "Weights — 500"
+    },
+    {
+      "name": "--rv-weight-semibold",
+      "description": "Weights — 600"
+    },
+    {
+      "name": "--rv-weight-bold",
+      "description": "Weights — 700"
+    },
+    {
+      "name": "--rv-weight-extra",
+      "description": "Weights — 800"
+    },
+    {
+      "name": "--rv-text-2xs",
+      "description": "11px — 0.6875rem"
+    },
+    {
+      "name": "--rv-text-xs",
+      "description": "12px — 0.75rem"
+    },
+    {
+      "name": "--rv-text-sm",
+      "description": "13px — 0.8125rem"
+    },
+    {
+      "name": "--rv-text-md",
+      "description": "14px — default UI size — 0.875rem"
+    },
+    {
+      "name": "--rv-text-base",
+      "description": "16px — 1rem"
+    },
+    {
+      "name": "--rv-text-lg",
+      "description": "18px — 1.125rem"
+    },
+    {
+      "name": "--rv-text-xl",
+      "description": "22px — 1.375rem"
+    },
+    {
+      "name": "--rv-text-2xl",
+      "description": "28px — 1.75rem"
+    },
+    {
+      "name": "--rv-text-3xl",
+      "description": "36px — 2.25rem"
+    },
+    {
+      "name": "--rv-text-4xl",
+      "description": "48px — 3rem"
+    },
+    {
+      "name": "--rv-leading-tight",
+      "description": "Line heights — 1.2"
+    },
+    {
+      "name": "--rv-leading-snug",
+      "description": "Line heights — 1.35"
+    },
+    {
+      "name": "--rv-leading-normal",
+      "description": "Line heights — 1.5"
+    },
+    {
+      "name": "--rv-leading-relaxed",
+      "description": "Line heights — 1.65"
+    },
+    {
+      "name": "--rv-tracking-tight",
+      "description": "Letter spacing — -0.018em"
+    },
+    {
+      "name": "--rv-tracking-normal",
+      "description": "Letter spacing — 0em"
+    },
+    {
+      "name": "--rv-tracking-wide",
+      "description": "Letter spacing — 0.02em"
+    },
+    {
+      "name": "--rv-tracking-caps",
+      "description": "Letter spacing — 0.06em"
+    },
+    {
+      "name": "--rv-heading-display",
+      "description": "Semantic heading sizes — var(--rv-text-4xl)"
+    },
+    {
+      "name": "--rv-heading-1",
+      "description": "Semantic heading sizes — var(--rv-text-3xl)"
+    },
+    {
+      "name": "--rv-heading-2",
+      "description": "Semantic heading sizes — var(--rv-text-2xl)"
+    },
+    {
+      "name": "--rv-heading-3",
+      "description": "Semantic heading sizes — var(--rv-text-xl)"
+    },
+    {
+      "name": "--rv-heading-4",
+      "description": "Semantic heading sizes — var(--rv-text-lg)"
+    },
+    {
+      "name": "--rv-heading-5",
+      "description": "Semantic heading sizes — var(--rv-text-base)"
+    },
+    {
+      "name": "--rv-heading-6",
+      "description": "Semantic heading sizes — var(--rv-text-xs)"
+    },
+    {
+      "name": "--rv-prose-size",
+      "description": "body font size — var(--rv-text-base)"
+    },
+    {
+      "name": "--rv-prose-lead",
+      "description": "paragraph line height — var(--rv-leading-relaxed)"
+    },
+    {
+      "name": "--rv-prose-width",
+      "description": "comfortable reading column — 68ch"
+    }
+  ]
+}

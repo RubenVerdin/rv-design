@@ -16,6 +16,14 @@ const classes = computed(() =>
 </script>
 
 <template>
-  <span v-if="dot" :class="classes" />
-  <span v-else :class="classes"><slot /></span>
+  <span
+    v-if="dot"
+    :class="classes"
+  />
+  <span
+    v-else
+    :class="classes"
+  >
+    <slot />
+  </span>
 </template>

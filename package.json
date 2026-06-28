@@ -23,7 +23,8 @@
     "styles.css",
     "tokens",
     "css",
-    "readme.md"
+    "readme.md",
+    ".vscode/rv-design.css-data.json"
   ],
   "main": "./dist/rv-design.umd.cjs",
   "module": "./dist/rv-design.js",
@@ -48,7 +49,9 @@
     "lint": "eslint . && stylelint \"**/*.{css,scss,vue}\" --ignore-path .gitignore",
     "lint:fix": "eslint . --fix && stylelint \"**/*.{css,scss,vue}\" --fix --ignore-path .gitignore",
     "storybook": "storybook dev --port 6006",
-    "build-storybook": "storybook build --output-dir storybook-static"
+    "build-storybook": "storybook build --output-dir storybook-static",
+    "generate:css-data": "node scripts/generate-css-data.mjs",
+    "prepare": "node scripts/install-hooks.mjs"
   },
   "peerDependencies": {
     "vue": "^3.4.0"

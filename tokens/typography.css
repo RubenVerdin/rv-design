@@ -49,4 +49,9 @@
   --rv-heading-4:       var(--rv-text-lg);
   --rv-heading-5:       var(--rv-text-base);
   --rv-heading-6:       var(--rv-text-xs);
+
+  /* ---- Prose (long-form / user-generated content) ---------------------- */
+  --rv-prose-size:  var(--rv-text-base);      /* body font size */
+  --rv-prose-lead:  var(--rv-leading-relaxed); /* paragraph line height */
+  --rv-prose-width: 68ch;                      /* comfortable reading column */
 }

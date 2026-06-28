@@ -16,6 +16,7 @@
 .rv-dropdown__panel {
   /* Reset UA popover defaults */
   margin: 0;
+  padding: 0;
   color: inherit;
   width: max-content;
 

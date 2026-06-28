@@ -1,34 +1,51 @@
-/* RV Design — Heading + text helpers
-   level → 1..6 ; also display variant for hero headings */
+/* RV Design — Heading
+   .rv-heading--{level} are used by the RvHeading component (BEM).
+   .rv-heading-{level}  are standalone utility classes for raw HTML. */
 
-.rv-heading {
+/* ---- Shared base styles ------------------------------------------------- */
+
+:is(
+  .rv-heading,
+  .rv-heading-display,
+  .rv-heading-1,
+  .rv-heading-2,
+  .rv-heading-3,
+  .rv-heading-4,
+  .rv-heading-5,
+  .rv-heading-6
+) {
   font-family: var(--rv-font-sans);
-  color: var(--rv-text-primary);
   font-weight: var(--rv-weight-bold);
   letter-spacing: var(--rv-tracking-tight);
   line-height: var(--rv-leading-tight);
+  color: var(--rv-text-primary);
   margin: 0;
   text-wrap: balance;
 }
-.rv-heading--1 { font-size: var(--rv-heading-1); }
-.rv-heading--2 { font-size: var(--rv-heading-2); }
-.rv-heading--3 { font-size: var(--rv-heading-3); }
-.rv-heading--4 { font-size: var(--rv-heading-4); font-weight: var(--rv-weight-semibold); }
-.rv-heading--5 { font-size: var(--rv-heading-5); font-weight: var(--rv-weight-semibold); }
-.rv-heading--6 {
-  font-size: var(--rv-heading-6);
-  font-weight: var(--rv-weight-semibold);
-  letter-spacing: var(--rv-tracking-caps);
-  text-transform: uppercase;
-  color: var(--rv-text-muted);
-}
-.rv-heading--display {
-  font-size: var(--rv-heading-display);
-  font-weight: var(--rv-weight-extra);
-  letter-spacing: -0.03em;
-}
-.rv-heading--accent { color: var(--rv-accent-text); }
-.rv-heading--muted  { color: var(--rv-text-muted); }
 
-.rv-text-muted    { color: var(--rv-text-muted); }
-.rv-text-secondary{ color: var(--rv-text-secondary); }
+/* ---- Component modifier classes (used by RvHeading) -------------------- */
+
+.rv-heading--display { font-size: var(--rv-heading-display); font-weight: var(--rv-weight-extra); letter-spacing: -0.03em; }
+.rv-heading--1       { font-size: var(--rv-heading-1); }
+.rv-heading--2       { font-size: var(--rv-heading-2); }
+.rv-heading--3       { font-size: var(--rv-heading-3); }
+.rv-heading--4       { font-size: var(--rv-heading-4); font-weight: var(--rv-weight-semibold); }
+.rv-heading--5       { font-size: var(--rv-heading-5); font-weight: var(--rv-weight-semibold); }
+.rv-heading--6       { font-size: var(--rv-heading-6); font-weight: var(--rv-weight-semibold); letter-spacing: var(--rv-tracking-caps); text-transform: uppercase; color: var(--rv-text-muted); }
+.rv-heading--accent  { color: var(--rv-accent-text); }
+.rv-heading--muted   { color: var(--rv-text-muted); }
+
+/* ---- Standalone utility classes (usable without RvHeading) ------------- */
+
+.rv-heading-display { font-size: var(--rv-heading-display); font-weight: var(--rv-weight-extra); letter-spacing: -0.03em; }
+.rv-heading-1       { font-size: var(--rv-heading-1); }
+.rv-heading-2       { font-size: var(--rv-heading-2); }
+.rv-heading-3       { font-size: var(--rv-heading-3); }
+.rv-heading-4       { font-size: var(--rv-heading-4); font-weight: var(--rv-weight-semibold); }
+.rv-heading-5       { font-size: var(--rv-heading-5); font-weight: var(--rv-weight-semibold); }
+.rv-heading-6       { font-size: var(--rv-heading-6); font-weight: var(--rv-weight-semibold); letter-spacing: var(--rv-tracking-caps); text-transform: uppercase; color: var(--rv-text-muted); }
+
+/* ---- Text tone helpers -------------------------------------------------- */
+
+.rv-text-muted     { color: var(--rv-text-muted); }
+.rv-text-secondary { color: var(--rv-text-secondary); }

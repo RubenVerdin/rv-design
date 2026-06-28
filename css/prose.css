@@ -1,0 +1,197 @@
+/* =========================================================================
+   RV Design — Prose
+   Styles raw semantic HTML from markdown parsers or CMS output.
+   Wrap user-generated content in .rv-prose or use the RvProse component.
+
+   Tokens to override per theme:
+     --rv-prose-size   body font size          (default: --rv-text-base)
+     --rv-prose-lead   paragraph line height   (default: --rv-leading-relaxed)
+     --rv-prose-width  readable column width   (default: 68ch)
+   ========================================================================= */
+
+.rv-prose {
+  font-size: var(--rv-prose-size);
+  line-height: var(--rv-prose-lead);
+  color: var(--rv-text-primary);
+}
+
+/* ---- Headings ----------------------------------------------------------- */
+
+.rv-prose h1,
+.rv-prose h2,
+.rv-prose h3,
+.rv-prose h4,
+.rv-prose h5,
+.rv-prose h6 {
+  font-family: var(--rv-font-sans);
+  font-weight: var(--rv-weight-bold);
+  letter-spacing: var(--rv-tracking-tight);
+  line-height: var(--rv-leading-tight);
+  color: var(--rv-text-primary);
+  margin-block: var(--rv-space-8) var(--rv-space-3);
+  text-wrap: balance;
+}
+
+.rv-prose h1 { font-size: var(--rv-heading-1); }
+.rv-prose h2 { font-size: var(--rv-heading-2); }
+.rv-prose h3 { font-size: var(--rv-heading-3); }
+.rv-prose h4 { font-size: var(--rv-heading-4); font-weight: var(--rv-weight-semibold); }
+.rv-prose h5 { font-size: var(--rv-heading-5); font-weight: var(--rv-weight-semibold); }
+.rv-prose h6 {
+  font-size: var(--rv-heading-6);
+  font-weight: var(--rv-weight-semibold);
+  letter-spacing: var(--rv-tracking-caps);
+  text-transform: uppercase;
+  color: var(--rv-text-muted);
+}
+
+.rv-prose > :first-child { margin-block-start: 0; }
+.rv-prose > :last-child  { margin-block-end: 0; }
+
+/* ---- Paragraphs --------------------------------------------------------- */
+
+.rv-prose p { margin-block: var(--rv-space-4) 0; }
+
+/* ---- Links -------------------------------------------------------------- */
+
+.rv-prose a {
+  color: var(--rv-text-link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: from-font;
+  transition: color var(--rv-duration-fast) var(--rv-ease-standard);
+}
+.rv-prose a:hover { color: var(--rv-accent-hover); }
+.rv-prose a:focus-visible { outline: none; box-shadow: var(--rv-ring); border-radius: var(--rv-radius-badge); }
+
+/* ---- Inline emphasis ---------------------------------------------------- */
+
+.rv-prose strong { font-weight: var(--rv-weight-semibold); color: var(--rv-text-primary); }
+.rv-prose em     { font-style: italic; }
+
+/* ---- Inline code -------------------------------------------------------- */
+
+.rv-prose :not(pre) > code {
+  font-family: var(--rv-font-mono);
+  font-size: 0.88em;
+  padding: 0.08em 0.4em;
+  border-radius: var(--rv-radius-badge);
+  background: var(--rv-surface-sunken);
+  border: var(--rv-border-width) solid var(--rv-border-subtle);
+  color: var(--rv-text-secondary);
+}
+
+/* ---- Code blocks -------------------------------------------------------- */
+
+.rv-prose pre {
+  font-family: var(--rv-font-mono);
+  font-size: var(--rv-text-sm);
+  line-height: var(--rv-leading-relaxed);
+  background: var(--rv-surface-sunken);
+  border: var(--rv-border-width) solid var(--rv-border-subtle);
+  border-radius: var(--rv-radius-card);
+  padding: var(--rv-space-4);
+  overflow-x: auto;
+  margin-block: var(--rv-space-4) 0;
+}
+
+.rv-prose pre code {
+  font-size: inherit;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: inherit;
+}
+
+/* ---- Blockquote --------------------------------------------------------- */
+
+.rv-prose blockquote {
+  border-inline-start: 0.25rem solid var(--rv-border-strong);
+  padding-inline-start: var(--rv-space-4);
+  margin-inline: 0;
+  margin-block: var(--rv-space-4) 0;
+  color: var(--rv-text-secondary);
+  font-style: italic;
+}
+
+/* ---- Lists -------------------------------------------------------------- */
+
+.rv-prose ul,
+.rv-prose ol {
+  padding-inline-start: var(--rv-space-6);
+  margin-block: var(--rv-space-4) 0;
+}
+
+.rv-prose ul { list-style-type: disc; }
+.rv-prose ol { list-style-type: decimal; }
+
+.rv-prose li                { margin-block-start: var(--rv-space-2); }
+.rv-prose li:first-child    { margin-block-start: 0; }
+.rv-prose li > ul,
+.rv-prose li > ol           { margin-block-start: var(--rv-space-2); }
+
+/* ---- Horizontal rule ---------------------------------------------------- */
+
+.rv-prose hr {
+  border: none;
+  border-top: var(--rv-border-width) solid var(--rv-border-default);
+  margin-block: var(--rv-space-8);
+}
+
+/* ---- Images ------------------------------------------------------------- */
+
+.rv-prose img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--rv-radius-card);
+  margin-block: var(--rv-space-4) 0;
+}
+
+/* ---- Tables ------------------------------------------------------------- */
+
+.rv-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--rv-text-sm);
+  margin-block: var(--rv-space-4) 0;
+}
+
+.rv-prose th {
+  text-align: left;
+  font-weight: var(--rv-weight-semibold);
+  color: var(--rv-text-secondary);
+  border-bottom: var(--rv-border-width-strong) solid var(--rv-border-default);
+  padding: var(--rv-space-2) var(--rv-space-3);
+}
+
+.rv-prose td {
+  border-bottom: var(--rv-border-width) solid var(--rv-border-subtle);
+  padding: var(--rv-space-2) var(--rv-space-3);
+  vertical-align: top;
+}
+
+.rv-prose tr:last-child td { border-bottom: none; }
+
+/* ---- Highlighted text (<mark>) ----------------------------------------- */
+
+.rv-prose mark {
+  background: var(--rv-accent-subtle);
+  color: var(--rv-accent-text);
+  border-radius: var(--rv-radius-badge);
+  padding: 0 var(--rv-space-1);
+}
+
+/* ---- Keyboard shortcut (<kbd>) ----------------------------------------- */
+
+.rv-prose kbd {
+  font-family: var(--rv-font-mono);
+  font-size: 0.85em;
+  padding: 0.1em 0.4em;
+  border-radius: var(--rv-radius-badge);
+  border: var(--rv-border-width) solid var(--rv-border-strong);
+  background: var(--rv-surface-card);
+  box-shadow: var(--rv-shadow-xs);
+  color: var(--rv-text-secondary);
+}

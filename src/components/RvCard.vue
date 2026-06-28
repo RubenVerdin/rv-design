@@ -19,11 +19,24 @@ const classes = computed(() => [
 
 <template>
   <div :class="classes">
-    <div v-if="title || $slots.title || $slots.extra" class="rv-card__header">
+    <div
+      v-if="title || $slots.title || $slots.extra"
+      class="rv-card__header"
+    >
       <span class="rv-card__title"><slot name="title">{{ title }}</slot></span>
-      <span v-if="$slots.extra" class="rv-card__extra"><slot name="extra" /></span>
+      <span
+        v-if="$slots.extra"
+        class="rv-card__extra"
+      ><slot name="extra" /></span>
     </div>
-    <div class="rv-card__body"><slot /></div>
-    <div v-if="$slots.footer" class="rv-card__footer"><slot name="footer" /></div>
+    <div class="rv-card__body">
+      <slot />
+    </div>
+    <div
+      v-if="$slots.footer"
+      class="rv-card__footer"
+    >
+      <slot name="footer" />
+    </div>
   </div>
 </template>

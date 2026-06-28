@@ -23,6 +23,7 @@ import RvTabs from './components/RvTabs.vue'
 import RvAccordion from './components/RvAccordion.vue'
 import RvDropdown from './components/RvDropdown.vue'
 import RvDropdownMenu from './components/RvDropdownMenu.vue'
+import RvProse from './components/RvProse.vue'
 import RvContainer from './components/RvContainer.vue'
 
 export { useTheme } from './composables/useTheme'
@@ -30,13 +31,13 @@ export { useTheme } from './composables/useTheme'
 export {
   RvButton, RvInput, RvTextarea, RvSelect, RvCheckbox, RvRadio, RvRadioGroup,
   RvSwitch, RvFormField, RvHeading, RvCard, RvBadge, RvTag, RvAvatar, RvAlert,
-  RvSpinner, RvTooltip, RvTabs, RvAccordion, RvDropdown, RvDropdownMenu, RvContainer,
+  RvSpinner, RvTooltip, RvTabs, RvAccordion, RvDropdown, RvDropdownMenu, RvProse, RvContainer,
 }
 
 const components = {
   RvButton, RvInput, RvTextarea, RvSelect, RvCheckbox, RvRadio, RvRadioGroup,
   RvSwitch, RvFormField, RvHeading, RvCard, RvBadge, RvTag, RvAvatar, RvAlert,
-  RvSpinner, RvTooltip, RvTabs, RvAccordion, RvDropdown, RvDropdownMenu, RvContainer,
+  RvSpinner, RvTooltip, RvTabs, RvAccordion, RvDropdown, RvDropdownMenu, RvProse, RvContainer,
 }
 
 export default {

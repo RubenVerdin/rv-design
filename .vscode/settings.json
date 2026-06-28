@@ -1,4 +1,6 @@
 {
+  "css.customData": [".vscode/rv-design.css-data.json"],
+  "scss.customData": [".vscode/rv-design.css-data.json"],
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
