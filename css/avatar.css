@@ -18,11 +18,11 @@
 .rv-avatar--small  { width: 1.875rem; height: 1.875rem; font-size: var(--rv-text-xs); }
 .rv-avatar--large  { width: 3rem;    height: 3rem;    font-size: var(--rv-text-lg); }
 .rv-avatar--xl     { width: 4rem;    height: 4rem;    font-size: var(--rv-text-xl); }
-.rv-avatar--square { border-radius: var(--rv-radius-md); }
-.rv-avatar--rounded{ border-radius: var(--rv-radius-lg); }
+.rv-avatar--square { border-radius: var(--rv-radius-control); }
+.rv-avatar--rounded{ border-radius: var(--rv-radius-card); }
 .rv-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .rv-avatar--accent { background: var(--rv-accent-subtle); color: var(--rv-accent-text); }
 
 .rv-avatar-group { display: inline-flex; }
-.rv-avatar-group .rv-avatar { box-shadow: 0 0 0 2px var(--rv-surface-card); }
+.rv-avatar-group .rv-avatar { box-shadow: 0 0 0 0.125rem var(--rv-surface-card); }
 .rv-avatar-group .rv-avatar + .rv-avatar { margin-left: -0.6rem; }

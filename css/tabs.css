@@ -24,13 +24,13 @@
 }
 .rv-tab:hover { color: var(--rv-text-primary); }
 .rv-tab--active { color: var(--rv-text-primary); }
-.rv-tab:focus-visible { outline: none; box-shadow: var(--rv-ring); border-radius: var(--rv-radius-sm); }
+.rv-tab:focus-visible { outline: none; box-shadow: var(--rv-ring); border-radius: var(--rv-radius-badge); }
 
 /* line variant */
 .rv-tabs--line .rv-tab {
-  padding: var(--rv-space-2) 0 calc(var(--rv-space-2) + 1px);
-  margin-bottom: -1px;
-  border-bottom: 2px solid transparent;
+  padding: var(--rv-space-2) 0 calc(var(--rv-space-2) + 0.0625rem);
+  margin-bottom: -0.0625rem;
+  border-bottom: 0.125rem solid transparent;
 }
 .rv-tabs--line .rv-tab--active { color: var(--rv-accent-text); border-bottom-color: var(--rv-accent); }
 
@@ -38,14 +38,14 @@
 .rv-tabs--segment .rv-tabs__list {
   background: var(--rv-surface-sunken);
   padding: var(--rv-space-1);
-  border-radius: var(--rv-radius-md);
-  gap: 2px;
+  border-radius: var(--rv-radius-control);
+  gap: 0.125rem;
   align-self: flex-start;
 }
 .rv-tabs--segment .rv-tab {
   padding: var(--rv-space-1) var(--rv-space-3);
   height: 1.875rem;
-  border-radius: var(--rv-radius-sm);
+  border-radius: var(--rv-radius-badge);
 }
 .rv-tabs--segment .rv-tab--active {
   background: var(--rv-surface-card);

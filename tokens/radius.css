@@ -1,15 +1,22 @@
 /* =========================================================================
    RV Design — Border radius tokens
-   Calm, slightly rounded. --rv-radius-md is the component default.
+   Raw scale + semantic aliases. Components reference aliases only so a
+   single override (e.g. --rv-radius-control: 0) reshapes a whole category.
    ========================================================================= */
 
 :root {
+  /* ---- Raw scale --------------------------------------------------------- */
   --rv-radius-none: 0;
   --rv-radius-xs:  0.1875rem;  /* 3  */
   --rv-radius-sm:  0.3125rem;  /* 5  */
-  --rv-radius-md:  0.4375rem;  /* 7  — default control radius */
-  --rv-radius-lg:  0.625rem;   /* 10 — cards */
-  --rv-radius-xl:  0.875rem;   /* 14 — large surfaces */
+  --rv-radius-md:  0.4375rem;  /* 7  */
+  --rv-radius-lg:  0.625rem;   /* 10 */
+  --rv-radius-xl:  0.875rem;   /* 14 */
   --rv-radius-2xl: 1.25rem;    /* 20 */
   --rv-radius-full: 999px;     /* pills / avatars */
+
+  /* ---- Semantic aliases -------------------------------------------------- */
+  --rv-radius-control: var(--rv-radius-md);   /* buttons, inputs, selects, alerts, tab segments */
+  --rv-radius-card:    var(--rv-radius-lg);   /* cards, panels, menus, dropdown, accordion */
+  --rv-radius-badge:   var(--rv-radius-sm);   /* badges, tags, tooltip, menu items, focus rings */
 }

@@ -15,13 +15,17 @@
 
 .rv-dropdown__panel {
   /* Reset UA popover defaults */
-  border: none;
-  padding: 0;
   margin: 0;
-  background: transparent;
   color: inherit;
-  overflow: visible;
   width: max-content;
+
+  /* Card styling — applies to all content, including custom slot */
+  background: var(--rv-surface-raised);
+  border: var(--rv-border-width) solid var(--rv-border-default);
+  border-radius: var(--rv-radius-card);
+  box-shadow: var(--rv-shadow-lg);
+  max-height: 16rem;
+  overflow-y: auto;
 
   /* Auto-flip when panel would overflow viewport */
   position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
@@ -104,6 +108,12 @@
   position: static;
   animation: none;
   margin-top: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  max-height: none;
+  overflow-y: visible;
   min-width: 11rem;
 }
 

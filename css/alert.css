@@ -5,7 +5,7 @@
   display: flex;
   gap: var(--rv-space-3);
   padding: var(--rv-space-3) var(--rv-space-4);
-  border-radius: var(--rv-radius-md);
+  border-radius: var(--rv-radius-control);
   border: var(--rv-border-width) solid transparent;
   color: var(--rv-text-primary);
   font-size: var(--rv-text-md);
@@ -22,10 +22,10 @@
 .rv-alert--error { border-color: color-mix(in oklab, var(--rv-color-error) 30%, transparent); background: color-mix(in oklab, var(--rv-color-error) 12%, var(--rv-surface-card)); }
 .rv-alert--error .rv-alert__icon, .rv-alert--error .rv-alert__title { color: var(--rv-color-error-fg); }
 
-.rv-alert__icon { flex: none; display: inline-flex; margin-top: 1px; }
+.rv-alert__icon { flex: none; display: inline-flex; margin-top: 0.0625rem; }
 .rv-alert__icon svg { width: var(--rv-icon-lg); height: var(--rv-icon-lg); }
-.rv-alert__body { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.rv-alert__body { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 0.125rem; }
 .rv-alert__title { font-weight: var(--rv-weight-semibold); }
 .rv-alert__content { color: var(--rv-text-secondary); }
-.rv-alert__close { flex: none; cursor: pointer; opacity: 0.6; color: var(--rv-text-muted); background: none; border: none; padding: 2px; border-radius: var(--rv-radius-sm); }
+.rv-alert__close { flex: none; cursor: pointer; opacity: 0.6; color: var(--rv-text-muted); background: none; border: none; padding: 0.125rem; border-radius: var(--rv-radius-badge); }
 .rv-alert__close:hover { opacity: 1; background: var(--rv-state-hover); }

@@ -40,4 +40,13 @@
   --rv-tracking-normal: 0em;
   --rv-tracking-wide:   0.02em;
   --rv-tracking-caps:   0.06em;
+
+  /* ---- Semantic heading sizes ------------------------------------------ */
+  --rv-heading-display: var(--rv-text-4xl);
+  --rv-heading-1:       var(--rv-text-3xl);
+  --rv-heading-2:       var(--rv-text-2xl);
+  --rv-heading-3:       var(--rv-text-xl);
+  --rv-heading-4:       var(--rv-text-lg);
+  --rv-heading-5:       var(--rv-text-base);
+  --rv-heading-6:       var(--rv-text-xs);
 }

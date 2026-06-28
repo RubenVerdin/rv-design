@@ -3,13 +3,13 @@
 .rv-card {
   background: var(--rv-surface-card);
   border: var(--rv-border-width) solid var(--rv-border-default);
-  border-radius: var(--rv-radius-lg);
+  border-radius: var(--rv-radius-card);
   color: var(--rv-text-primary);
 }
 .rv-card--raised { box-shadow: var(--rv-shadow-md); border-color: var(--rv-border-subtle); }
 .rv-card--flat   { box-shadow: none; }
 .rv-card--hoverable { transition: var(--rv-transition-control); cursor: pointer; }
-.rv-card--hoverable:hover { box-shadow: var(--rv-shadow-lg); transform: translateY(-1px); border-color: var(--rv-border-subtle); }
+.rv-card--hoverable:hover { box-shadow: var(--rv-shadow-lg); transform: translateY(-0.0625rem); border-color: var(--rv-border-subtle); }
 
 .rv-card__header {
   display: flex;

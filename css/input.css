@@ -12,7 +12,7 @@
   color: var(--rv-text-primary);
   background: var(--rv-surface-card);
   border: var(--rv-border-width) solid var(--rv-border-default);
-  border-radius: var(--rv-radius-md);
+  border-radius: var(--rv-radius-control);
   transition: var(--rv-transition-control);
 }
 .rv-input:hover { border-color: var(--rv-border-strong); }

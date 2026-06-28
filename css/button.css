@@ -12,7 +12,7 @@
   font-weight: var(--rv-weight-medium);
   white-space: nowrap;
   border: var(--rv-border-width) solid transparent;
-  border-radius: var(--rv-radius-md);
+  border-radius: var(--rv-radius-control);
   cursor: pointer;
   user-select: none;
   text-decoration: none;

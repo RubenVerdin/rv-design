@@ -3,13 +3,13 @@
 .rv-accordion { display: flex; flex-direction: column; }
 .rv-accordion--bordered {
   border: var(--rv-border-width) solid var(--rv-border-default);
-  border-radius: var(--rv-radius-lg);
+  border-radius: var(--rv-radius-card);
   overflow: hidden;
 }
 .rv-accordion--separated { gap: var(--rv-space-2); }
 .rv-accordion--separated .rv-accordion__item {
   border: var(--rv-border-width) solid var(--rv-border-default);
-  border-radius: var(--rv-radius-md);
+  border-radius: var(--rv-radius-control);
 }
 
 .rv-accordion__item { border-bottom: var(--rv-border-width) solid var(--rv-border-subtle); }
