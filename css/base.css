@@ -49,6 +49,10 @@
   box-shadow: var(--rv-ring);
 }
 
+p {
+  margin-top: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rv-app * {
     transition-duration: 0.01ms !important;

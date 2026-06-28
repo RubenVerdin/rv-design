@@ -14,25 +14,32 @@ const slots = useSlots()
 const isIconOnly = computed(
   () => props.iconOnly || (!slots.default && (slots.iconLeft || slots.iconRight)),
 )
-
-const classes = computed(() => [
-  'rv-btn',
-  `rv-btn--${props.type}`,
-  `rv-btn--${props.size}`,
-  { 'rv-btn--icon': isIconOnly.value,
-    'rv-btn--disabled': props.disabled },
-])
 </script>
 
 <template>
   <button
-    :class="classes"
+    class="rv-btn"
     type="button"
+    :data-type="type"
+    :data-size="size"
+    :data-icon-only="isIconOnly || undefined"
     :disabled="disabled"
     @click="$emit('click', $event)"
   >
-    <span v-if="$slots.iconLeft" class="rv-btn__icon"><slot name="iconLeft" /></span>
+    <span
+      v-if="$slots.iconLeft"
+      class="rv-btn__icon"
+    >
+      <slot name="iconLeft" />
+    </span>
+
     <slot />
-    <span v-if="$slots.iconRight" class="rv-btn__icon"><slot name="iconRight" /></span>
+
+    <span
+      v-if="$slots.iconRight"
+      class="rv-btn__icon"
+    >
+      <slot name="iconRight" />
+    </span>
   </button>
 </template>

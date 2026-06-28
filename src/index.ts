@@ -22,19 +22,20 @@ import RvTooltip from './components/RvTooltip.vue'
 import RvTabs from './components/RvTabs.vue'
 import RvAccordion from './components/RvAccordion.vue'
 import RvDropdown from './components/RvDropdown.vue'
+import RvContainer from './components/RvContainer.vue'
 
 export { useTheme } from './composables/useTheme'
 
 export {
   RvButton, RvInput, RvTextarea, RvSelect, RvCheckbox, RvRadio, RvRadioGroup,
   RvSwitch, RvFormField, RvHeading, RvCard, RvBadge, RvTag, RvAvatar, RvAlert,
-  RvSpinner, RvTooltip, RvTabs, RvAccordion, RvDropdown,
+  RvSpinner, RvTooltip, RvTabs, RvAccordion, RvDropdown, RvContainer,
 }
 
 const components = {
   RvButton, RvInput, RvTextarea, RvSelect, RvCheckbox, RvRadio, RvRadioGroup,
   RvSwitch, RvFormField, RvHeading, RvCard, RvBadge, RvTag, RvAvatar, RvAlert,
-  RvSpinner, RvTooltip, RvTabs, RvAccordion, RvDropdown,
+  RvSpinner, RvTooltip, RvTabs, RvAccordion, RvDropdown, RvContainer,
 }
 
 export default {

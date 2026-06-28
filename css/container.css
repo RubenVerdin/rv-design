@@ -1,0 +1,11 @@
+/* RV Design — RvContainer
+   ---------------------------------------------------------------------- */
+
+.rv-container {
+  display: block;
+}
+
+.rv-container__text {
+  font-family: var(--rv-font-sans);
+  color: var(--rv-text-primary);
+}
