@@ -35,6 +35,8 @@
     },
     "./styles.css": "./dist/rv-design.css",
     "./css": "./styles.css",
+    "./reset": "./css/reset.css",
+    "./utilities": "./css/utilities.css",
     "./tokens/*": "./tokens/*",
     "./package.json": "./package.json"
   },

@@ -8,7 +8,6 @@
   --rv-duration-fast:    140ms; /* @kind other */
   --rv-duration-normal:  220ms; /* @kind other */
   --rv-duration-slow:    320ms; /* @kind other */
-
   --rv-ease-standard: cubic-bezier(0.2, 0, 0.1, 1);  /* @kind other */
   --rv-ease-out:      cubic-bezier(0.16, 1, 0.3, 1);  /* @kind other */
   --rv-ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */

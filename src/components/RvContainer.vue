@@ -18,7 +18,6 @@ const classes = computed(() => [
     :class="classes"
   >
     <slot />
-    <h2>hello</h2>
   </component>
 </template>
 

@@ -1,0 +1,158 @@
+/* =========================================================================
+   RV Design — Scoped reset
+   All rules are scoped to .rv-app — never affects the host page globally.
+   Add class="rv-app" to the root element of your application or component
+   tree to opt in.
+   ========================================================================= */
+
+/* ---- Box model --------------------------------------------------------- */
+
+.rv-app,
+.rv-app *,
+.rv-app *::before,
+.rv-app *::after {
+  box-sizing: border-box;
+}
+
+/* ---- Base typography --------------------------------------------------- */
+
+.rv-app {
+  font-family: var(--rv-font-sans);
+  font-size: var(--rv-text-md);
+  line-height: var(--rv-leading-normal);
+  color: var(--rv-text-primary);
+  background: var(--rv-surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Headings ---------------------------------------------------------- */
+
+.rv-app h1,
+.rv-app h2,
+.rv-app h3,
+.rv-app h4,
+.rv-app h5,
+.rv-app h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* ---- Block elements ---------------------------------------------------- */
+
+.rv-app p,
+.rv-app figure,
+.rv-app blockquote,
+.rv-app dl,
+.rv-app dd {
+  margin: 0;
+}
+
+/* ---- Lists ------------------------------------------------------------- */
+
+.rv-app ul,
+.rv-app ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Monospace --------------------------------------------------------- */
+
+.rv-app code,
+.rv-app kbd,
+.rv-app pre,
+.rv-app .rv-mono {
+  font-family: var(--rv-font-mono);
+  font-feature-settings: "calt" 0;
+}
+
+/* ---- Links ------------------------------------------------------------- */
+
+.rv-app a {
+  color: var(--rv-text-link);
+  text-decoration: none;
+}
+.rv-app a:hover { text-decoration: underline; }
+
+/* ---- Form elements ----------------------------------------------------- */
+
+.rv-app button,
+.rv-app input,
+.rv-app optgroup,
+.rv-app select,
+.rv-app textarea {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+.rv-app button,
+.rv-app [type="button"],
+.rv-app [type="reset"],
+.rv-app [type="submit"] {
+  appearance: button;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.rv-app fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rv-app legend {
+  padding: 0;
+}
+
+/* ---- Media ------------------------------------------------------------- */
+
+.rv-app img,
+.rv-app picture,
+.rv-app video,
+.rv-app canvas,
+.rv-app svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---- Tables ------------------------------------------------------------ */
+
+.rv-app table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---- Horizontal rule --------------------------------------------------- */
+
+.rv-app hr {
+  border: none;
+  border-top: var(--rv-border-width) solid var(--rv-border-default);
+  margin: 0;
+}
+
+/* ---- Hidden attribute -------------------------------------------------- */
+
+.rv-app [hidden] {
+  display: none;
+}
+
+/* ---- Focus ring -------------------------------------------------------- */
+
+.rv-app :focus-visible {
+  outline: none;
+  box-shadow: var(--rv-ring);
+}
+
+/* ---- Reduced motion ---------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .rv-app * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

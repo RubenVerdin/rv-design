@@ -1,14 +1,113 @@
-/* RV Design — Dropdown (uses .rv-menu visual language from select.css) */
+/* =========================================================================
+   RV Design — Dropdown
+   Popover API + CSS Anchor Positioning.
+   Panel is promoted to the top layer — never clipped by overflow parents.
+   Light-dismiss and sibling-exclusivity are handled by the browser.
+   ========================================================================= */
 
-.rv-dropdown { position: relative; display: inline-flex; }
+/* ---- Trigger wrapper --------------------------------------------------- */
+
+.rv-dropdown__trigger {
+  display: inline-flex;
+}
+
+/* ---- Panel (popover element) ------------------------------------------- */
+
 .rv-dropdown__panel {
-  position: absolute;
-  top: 100%;
-  z-index: 60;
+  /* Reset UA popover defaults */
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: inherit;
+  overflow: visible;
+  width: max-content;
+
+  /* Auto-flip when panel would overflow viewport */
+  position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
+
+  /* Animation */
+  transition:
+    opacity var(--rv-duration-fast) var(--rv-ease-out),
+    transform var(--rv-duration-fast) var(--rv-ease-out),
+    display var(--rv-duration-fast) allow-discrete,
+    overlay var(--rv-duration-fast) allow-discrete;
+}
+
+/* ---- Placement → position-area + offset margin ------------------------- */
+
+.rv-dropdown__panel[data-placement="bottom-start"] {
+  position-area: block-end span-inline-end;
+  margin-block-start: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+.rv-dropdown__panel[data-placement="bottom"] {
+  position-area: block-end center;
+  margin-block-start: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+.rv-dropdown__panel[data-placement="bottom-end"] {
+  position-area: block-end span-inline-start;
+  margin-block-start: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+.rv-dropdown__panel[data-placement="top-start"] {
+  position-area: block-start span-inline-end;
+  margin-block-end: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+.rv-dropdown__panel[data-placement="top"] {
+  position-area: block-start center;
+  margin-block-end: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+.rv-dropdown__panel[data-placement="top-end"] {
+  position-area: block-start span-inline-start;
+  margin-block-end: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+.rv-dropdown__panel[data-placement="right-start"] {
+  position-area: span-block-end inline-end;
+  margin-inline-start: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+.rv-dropdown__panel[data-placement="right"] {
+  position-area: center inline-end;
+  margin-inline-start: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+.rv-dropdown__panel[data-placement="right-end"] {
+  position-area: span-block-start inline-end;
+  margin-inline-start: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+.rv-dropdown__panel[data-placement="left-start"] {
+  position-area: span-block-end inline-start;
+  margin-inline-end: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+.rv-dropdown__panel[data-placement="left"] {
+  position-area: center inline-start;
+  margin-inline-end: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+.rv-dropdown__panel[data-placement="left-end"] {
+  position-area: span-block-start inline-start;
+  margin-inline-end: var(--rv-drop-offset, var(--rv-space-2));
+}
+
+/* ---- .rv-menu overrides inside the dropdown panel ---------------------- */
+
+/* select.css defines .rv-menu as position: absolute with margin-top.
+   Inside the dropdown panel neither applies. */
+.rv-dropdown__panel .rv-menu {
+  position: static;
+  animation: none;
+  margin-top: 0;
   min-width: 11rem;
 }
-.rv-dropdown__panel--right { right: 0; }
-.rv-dropdown__panel--left  { left: 0; }
+
+/* ---- Menu item icon + danger ------------------------------------------ */
 
 .rv-menu__item-icon { display: inline-flex; flex: none; color: var(--rv-text-muted); }
 .rv-menu__item-icon svg { width: var(--rv-icon-md); height: var(--rv-icon-md); }
@@ -17,3 +116,27 @@
 .rv-menu__item--danger .rv-menu__item-icon { color: var(--rv-color-error-fg); }
 .rv-menu__item--danger:hover { background: color-mix(in oklab, var(--rv-color-error) 12%, transparent); }
 .rv-menu__shortcut { margin-left: auto; font-size: var(--rv-text-xs); color: var(--rv-text-muted); font-family: var(--rv-font-mono); }
+
+/* ---- Animation: closed (exit) state ------------------------------------ */
+
+.rv-dropdown__panel[data-animation="slide"]:not(:popover-open)  { opacity: 0; transform: translateY(calc(-1 * var(--rv-space-1))); }
+.rv-dropdown__panel[data-animation="scale"]:not(:popover-open)  { opacity: 0; transform: scale(0.95); }
+.rv-dropdown__panel[data-animation="fade"]:not(:popover-open)   { opacity: 0; }
+.rv-dropdown__panel[data-animation="none"]                      { transition: none; }
+
+/* Flip slide direction for top / right / left placements */
+.rv-dropdown__panel[data-placement^="top"][data-animation="slide"]:not(:popover-open)   { transform: translateY(var(--rv-space-1)); }
+.rv-dropdown__panel[data-placement^="right"][data-animation="slide"]:not(:popover-open) { transform: translateX(calc(-1 * var(--rv-space-1))); }
+.rv-dropdown__panel[data-placement^="left"][data-animation="slide"]:not(:popover-open)  { transform: translateX(var(--rv-space-1)); }
+
+/* ---- Animation: entry (starting) state --------------------------------- */
+
+@starting-style {
+  .rv-dropdown__panel[data-animation="slide"]:popover-open { opacity: 0; transform: translateY(calc(-1 * var(--rv-space-1))); }
+  .rv-dropdown__panel[data-animation="scale"]:popover-open { opacity: 0; transform: scale(0.95); }
+  .rv-dropdown__panel[data-animation="fade"]:popover-open  { opacity: 0; }
+
+  .rv-dropdown__panel[data-placement^="top"][data-animation="slide"]:popover-open   { opacity: 0; transform: translateY(var(--rv-space-1)); }
+  .rv-dropdown__panel[data-placement^="right"][data-animation="slide"]:popover-open { opacity: 0; transform: translateX(calc(-1 * var(--rv-space-1))); }
+  .rv-dropdown__panel[data-placement^="left"][data-animation="slide"]:popover-open  { opacity: 0; transform: translateX(var(--rv-space-1)); }
+}

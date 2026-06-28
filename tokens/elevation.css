@@ -5,25 +5,24 @@
 
 :root {
   --rv-shadow-color: 264 13% 16%; /* neutral-900-ish, h s l for alpha mixing */
-
   --rv-shadow-xs:
-    0 1px 1px hsl(var(--rv-shadow-color) / 0.05);
+    0 1px 1px hsl(var(--rv-shadow-color) / 5%);
   --rv-shadow-sm:
-    0 1px 2px hsl(var(--rv-shadow-color) / 0.06),
-    0 1px 1px hsl(var(--rv-shadow-color) / 0.04);
+    0 1px 2px hsl(var(--rv-shadow-color) / 6%),
+    0 1px 1px hsl(var(--rv-shadow-color) / 4%);
   --rv-shadow-md:
-    0 2px 4px hsl(var(--rv-shadow-color) / 0.06),
-    0 4px 8px hsl(var(--rv-shadow-color) / 0.06);
+    0 2px 4px hsl(var(--rv-shadow-color) / 6%),
+    0 4px 8px hsl(var(--rv-shadow-color) / 6%);
   --rv-shadow-lg:
-    0 4px 8px hsl(var(--rv-shadow-color) / 0.06),
-    0 12px 24px hsl(var(--rv-shadow-color) / 0.10);
+    0 4px 8px hsl(var(--rv-shadow-color) / 6%),
+    0 12px 24px hsl(var(--rv-shadow-color) / 10%);
   --rv-shadow-xl:
-    0 8px 16px hsl(var(--rv-shadow-color) / 0.08),
-    0 24px 48px hsl(var(--rv-shadow-color) / 0.14);
+    0 8px 16px hsl(var(--rv-shadow-color) / 8%),
+    0 24px 48px hsl(var(--rv-shadow-color) / 14%);
 
   /* Inner shadow for sunken / pressed inputs */
   --rv-shadow-inset:
-    inset 0 1px 2px hsl(var(--rv-shadow-color) / 0.08);
+    inset 0 1px 2px hsl(var(--rv-shadow-color) / 8%);
 
   /* Focus ring composition (used as box-shadow) */
   --rv-ring-width: 3px;

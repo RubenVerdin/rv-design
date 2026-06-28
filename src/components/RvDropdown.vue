@@ -1,71 +1,199 @@
-﻿<script setup lang="ts">
-// RvDropdown — menu anchored to a trigger slot.
-// items: [{ key, label, icon?, shortcut?, danger?, disabled?, onClick? }
-//          | { type: 'divider' } | { type: 'label', label }]
-import { ref, onMounted, onBeforeUnmount, type PropType } from 'vue'
-
-interface DropdownItem {
-  key?: string | number
-  type?: 'divider' | 'label'
-  label?: string
-  icon?: string
-  shortcut?: string
-  danger?: boolean
-  disabled?: boolean
-  onClick?: () => void
-}
+<script setup lang="ts">
+// RvDropdown — aim-aware, popover-based dropdown anchored to its trigger.
+// trigger="click" (default) | "hover"
+// placement: 12 positions, auto-flips via CSS position-try-fallbacks.
+// Panel uses popover="auto": top-layer, light-dismiss, sibling-exclusivity.
+import { ref, computed, watch, onBeforeUnmount, getCurrentInstance, nextTick } from 'vue'
+import { useAimAware } from '../composables/useAimAware'
+import { useDropdownPosition, type DropdownPlacement } from '../composables/useDropdownPosition'
 
 const props = defineProps({
-  items: { type: Array as PropType<DropdownItem[]>, default: () => [] },
-  align: { type: String, default: 'left' }, // left|right
+  trigger:    { type: String as () => 'click' | 'hover', default: 'click' },
+  placement:  { type: String as () => DropdownPlacement, default: 'bottom-start' },
+  offset:     { type: Number, default: 8 },
+  animation:  { type: String as () => 'slide' | 'scale' | 'fade' | 'none', default: 'slide' },
+  hoverDelay: { type: Number, default: 100 },
+  disabled:   { type: Boolean, default: false },
 })
-const emit = defineEmits(['select'])
 
-const open = ref(false)
-const root = ref<HTMLElement | null>(null)
+const emit = defineEmits<{ open: []; close: [] }>()
 
-function choose(it: DropdownItem): void {
-  if (it.disabled || it.type === 'divider' || it.type === 'label') return
-  emit('select', it.key, it)
-  it.onClick?.()
-  open.value = false
+const uid      = getCurrentInstance()!.uid
+const panelId  = `rv-drop-${uid}`
+const anchorName = `--rv-drop-${uid}`
+
+const triggerRef = ref<HTMLElement | null>(null)
+const panelRef   = ref<HTMLElement | null>(null)
+const isOpen     = ref(false)
+
+// ---- ARIA props passed to the trigger slot --------------------------------
+
+const triggerProps = computed(() => ({
+  'aria-haspopup':  'menu' as const,
+  'aria-expanded':  isOpen.value,
+  'aria-controls':  panelId,
+}))
+
+// ---- Panel style ----------------------------------------------------------
+
+const panelStyle = computed(() => ({
+  positionAnchor: anchorName,
+  '--rv-drop-offset': `${props.offset}px`,
+}))
+
+// ---- JS fallback positioning (no-op when anchor positioning is supported) -
+
+useDropdownPosition(
+  triggerRef,
+  panelRef,
+  () => props.placement,
+  () => props.offset,
+  isOpen,
+)
+
+// ---- Aim-aware hover ------------------------------------------------------
+
+const aim = useAimAware(panelRef, () => panelRef.value?.hidePopover(), () => props.hoverDelay)
+
+function onTriggerEnter() {
+  if (props.trigger !== 'hover' || props.disabled) return
+  aim.cancelClose()
+  panelRef.value?.showPopover()
 }
-function onDoc(e: MouseEvent): void {
-  if (root.value && !root.value.contains(e.target as Node)) open.value = false
+
+function onTriggerLeave() {
+  if (props.trigger !== 'hover') return
+  aim.scheduleClose()
 }
-function onKey(e: KeyboardEvent): void {
-  if (e.key === 'Escape') open.value = false
+
+function onPanelEnter() {
+  if (props.trigger !== 'hover') return
+  aim.cancelClose()
 }
-onMounted(() => {
-  document.addEventListener('mousedown', onDoc)
-  document.addEventListener('keydown', onKey)
+
+function onPanelLeave() {
+  if (props.trigger !== 'hover') return
+  aim.scheduleClose()
+}
+
+// Track mouse globally while panel is open (aim-awareness works in transit)
+function onDocMouseMove(e: MouseEvent) { aim.track(e) }
+
+watch(isOpen, (open) => {
+  if (open && props.trigger === 'hover') {
+    document.addEventListener('mousemove', onDocMouseMove)
+  } else {
+    document.removeEventListener('mousemove', onDocMouseMove)
+  }
 })
+
+// ---- Click mode -----------------------------------------------------------
+
+function onTriggerClick() {
+  if (props.trigger !== 'click' || props.disabled) return
+  if (isOpen.value) panelRef.value?.hidePopover()
+  else              panelRef.value?.showPopover()
+}
+
+// ---- Popover toggle -------------------------------------------------------
+
+function onToggle(e: Event) {
+  const te = e as ToggleEvent
+  isOpen.value = te.newState === 'open'
+  if (te.newState === 'open') {
+    emit('open')
+    nextTick(focusFirstItem)
+  } else {
+    emit('close')
+    aim.reset()
+  }
+}
+
+// ---- Keyboard navigation --------------------------------------------------
+
+function menuItems(): HTMLElement[] {
+  return Array.from(
+    panelRef.value?.querySelectorAll<HTMLElement>(
+      '[role="menuitem"]:not([aria-disabled="true"])'
+    ) ?? []
+  )
+}
+
+function focusFirstItem() {
+  menuItems()[0]?.focus()
+}
+
+function onPanelKeydown(e: KeyboardEvent) {
+  const items = menuItems()
+  if (!items.length) return
+
+  const idx = items.indexOf(document.activeElement as HTMLElement)
+
+  switch (e.key) {
+    case 'ArrowDown':
+      e.preventDefault()
+      items[(idx + 1) % items.length]?.focus()
+      break
+    case 'ArrowUp':
+      e.preventDefault()
+      items[(idx - 1 + items.length) % items.length]?.focus()
+      break
+    case 'Home':
+      e.preventDefault()
+      items[0]?.focus()
+      break
+    case 'End':
+      e.preventDefault()
+      items[items.length - 1]?.focus()
+      break
+    case 'Escape':
+      panelRef.value?.hidePopover()
+      triggerRef.value?.querySelector<HTMLElement>('button,[tabindex="0"],[tabindex="-1"]')?.focus()
+      break
+    case 'Tab':
+      panelRef.value?.hidePopover()
+      break
+  }
+}
+
+// ---- Cleanup --------------------------------------------------------------
+
 onBeforeUnmount(() => {
-  document.removeEventListener('mousedown', onDoc)
-  document.removeEventListener('keydown', onKey)
+  document.removeEventListener('mousemove', onDocMouseMove)
+  aim.reset()
 })
 </script>
 
 <template>
-  <div ref="root" class="rv-dropdown">
-    <span @click="open = !open"><slot name="trigger" /></span>
-    <div v-if="open" :class="['rv-dropdown__panel', `rv-dropdown__panel--${align}`]">
-      <div class="rv-menu" role="menu">
-        <template v-for="(it, i) in items" :key="it.key ?? i">
-          <div v-if="it.type === 'divider'" class="rv-menu__sep" />
-          <div v-else-if="it.type === 'label'" class="rv-menu__label">{{ it.label }}</div>
-          <div
-            v-else
-            role="menuitem"
-            :class="['rv-menu__item', it.danger && 'rv-menu__item--danger', it.disabled && 'rv-menu__item--disabled']"
-            @click="choose(it)"
-          >
-            <span v-if="it.icon" class="rv-menu__item-icon" v-html="it.icon" />
-            <span>{{ it.label }}</span>
-            <span v-if="it.shortcut" class="rv-menu__shortcut">{{ it.shortcut }}</span>
-          </div>
-        </template>
-      </div>
-    </div>
+  <div
+    ref="triggerRef"
+    class="rv-dropdown__trigger"
+    :style="{ anchorName }"
+    @click="onTriggerClick"
+    @mouseenter="onTriggerEnter"
+    @mouseleave="onTriggerLeave"
+  >
+    <slot
+      name="trigger"
+      v-bind="triggerProps"
+    />
+  </div>
+
+  <div
+    :id="panelId"
+    ref="panelRef"
+    popover="auto"
+    role="menu"
+    tabindex="-1"
+    class="rv-dropdown__panel"
+    :data-placement="placement"
+    :data-animation="animation"
+    :style="panelStyle"
+    @toggle="onToggle"
+    @keydown="onPanelKeydown"
+    @mouseenter="onPanelEnter"
+    @mouseleave="onPanelLeave"
+  >
+    <slot />
   </div>
 </template>

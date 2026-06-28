@@ -1,0 +1,140 @@
+/* =========================================================================
+   RV Design — Semantic utility classes
+   Optional — import separately only if needed:
+     import 'rv-design/utilities'
+   NOT included in the default styles.css bundle.
+   ========================================================================= */
+
+/* ---- Accessibility ----------------------------------------------------- */
+
+.rv-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.rv-not-sr-only {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* ---- Focus ring (standalone, usable outside .rv-app) ------------------- */
+
+.rv-focusable:focus-visible {
+  outline: none;
+  box-shadow: var(--rv-ring);
+}
+
+/* ---- Text truncation --------------------------------------------------- */
+
+.rv-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rv-line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.rv-line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---- Text colors ------------------------------------------------------- */
+
+.rv-text-primary   { color: var(--rv-text-primary); }
+.rv-text-secondary { color: var(--rv-text-secondary); }
+.rv-text-muted     { color: var(--rv-text-muted); }
+.rv-text-disabled  { color: var(--rv-text-disabled); }
+.rv-text-link      { color: var(--rv-text-link); }
+
+/* ---- Inline code chip -------------------------------------------------- */
+
+.rv-code {
+  font-family: var(--rv-font-mono);
+  font-size: 0.92em;
+  padding: 0.08em 0.4em;
+  border-radius: var(--rv-radius-sm);
+  background: var(--rv-surface-sunken);
+  border: var(--rv-border-width) solid var(--rv-border-subtle);
+  color: var(--rv-text-secondary);
+}
+
+/* ---- Layout: flex helpers ---------------------------------------------- */
+
+.rv-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rv-inline-flex-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rv-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---- Layout: composition patterns -------------------------------------- */
+
+/* Vertical stack — children flow top to bottom with consistent gap */
+.rv-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rv-space-4);
+}
+
+.rv-stack-sm { gap: var(--rv-space-2); }
+.rv-stack-lg { gap: var(--rv-space-6); }
+
+/* Horizontal cluster — wraps naturally, consistent gap */
+.rv-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--rv-space-4);
+}
+
+.rv-cluster-sm { gap: var(--rv-space-2); }
+.rv-cluster-lg { gap: var(--rv-space-6); }
+
+/* ---- Surface ----------------------------------------------------------- */
+
+/* Applies a card-like surface without needing the RvCard component */
+.rv-surface {
+  background: var(--rv-surface-card);
+  border: var(--rv-border-width) solid var(--rv-border-default);
+  border-radius: var(--rv-radius-lg);
+}
+
+/* ---- Divider ----------------------------------------------------------- */
+
+.rv-divider {
+  border: none;
+  border-top: var(--rv-border-width) solid var(--rv-border-default);
+  margin: 0;
+}
